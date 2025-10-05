@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ai_translator
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  backend:
+    build: ./backend
+    command: python run.py
+    environment:
+      - DATABASE_URL=postgresql+psycopg2://postgres:postgres@db:5432/ai_translator
+      - SECRET_KEY=change-me
+      - CORS_ORIGINS=http://localhost:5173
+    ports: ["5000:5000"]
+    depends_on: [db]
+  frontend:
+    build: ./frontend
+    command: npm run dev -- --host
+    ports: ["5173:5173"]
+    depends_on: [backend]
+volumes:
+  pgdata:

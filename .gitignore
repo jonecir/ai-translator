@@ -1,0 +1,12 @@
+**/__pycache__/
+**/.python-version
+**/.ruff_cache/
+**/.mypy_cache/
+**/.pytest_cache/
+backend/.venv/
+backend/uploads/
+backend/outputs/
+frontend/node_modules/
+*.log
+.DS_Store
+.env
