@@ -21,6 +21,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
+          # Caminho do arquivo de dependências a partir da raiz do repo
+          cache-dependency-path: "backend/requirements.txt"
 
       - name: Install dependencies
         run: |
@@ -53,6 +56,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
+          # Caminho do package-lock a partir da raiz
+          cache-dependency-path: "frontend/package-lock.json"
 
       - name: Install dependencies
         run: |
