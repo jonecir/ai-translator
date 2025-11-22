@@ -1,0 +1,231 @@
+{
+  "common": {
+    "close": "閉じる"
+  },
+
+  "lang": {
+  "select": "言語",
+  "de": "ドイツ語",
+  "en": "英語",
+  "es": "スペイン語",
+  "fr": "フランス語",
+  "it": "イタリア語",
+  "ja": "日本語",
+  "nl": "オランダ語",
+  "pl": "ポーランド語",
+  "pt": "ポルトガル語",
+  "ro": "ルーマニア語",
+  "zhCN": "中国語（簡体字）"
+  },
+
+  "localeNames": {
+    "de-DE": "ドイツ語（ドイツ）",
+    "en-US": "英語（米国）",
+    "es-ES": "スペイン語（スペイン）",
+    "fr-FR": "フランス語（フランス）",
+    "it-IT": "イタリア語（イタリア）",
+    "ja-JP": "日本語",
+    "nl-NL": "オランダ語（オランダ）",
+    "pl-PL": "ポーランド語（ポーランド）",
+    "pt-BR": "ポルトガル語（ブラジル）",
+    "ro-RO": "ルーマニア語（ルーマニア）",
+    "zh-CN": "中国語（簡体字）"
+  },
+
+  "jobs": {
+    "title": "ジョブ",
+    "file": "ファイル（DOCX）",
+    "glossary": "用語集",
+    "from": "原文言語",
+    "to_multiple": "翻訳先（複数）",
+    "hold_ctrl": "複数選択は Ctrl/⌘ を押しながら。原文言語と同じ言語は選べません。",
+    "noGlossary": "用語集なし",
+    "selected": "選択済み:",
+    "sending": "送信中...",
+    "itemsPerPage": "1ページあたりの件数",
+    "searchPlaceholder": "ID またはタイトルで検索...",
+    "sameAsFrom": "「元の言語」と同じ",
+    "okShort": "ok",
+
+    "status": {
+      "done": "完了",
+      "processing": "処理中",
+      "failed": "失敗",
+      "mixed": "混在"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "タイトル",
+      "status": "ステータス",
+      "targets": "宛先",
+      "updated": "更新日時"
+    },
+
+    "loading": "読み込み中...",
+    "empty": "ジョブが見つかりません",
+    "waiting": "（待機中）",
+    "total": "合計",
+    "prev": "前へ",
+    "next": "次へ",
+    "page": "ページ",
+    "fail": "失敗",
+
+    "needDifferentTarget": "原文言語と異なる翻訳先を少なくとも1つ選択してください。",
+    "couldNotCreate": "ジョブを作成できませんでした。ファイルを確認してもう一度お試しください。",
+    "downloadNotReady": "出力がまだ準備できていないか、ダウンロード中にエラーが発生しました。",
+    "downloadLangFail": "{{lang}} のダウンロードに失敗しました",
+    "deleted": "ジョブ {{id}} を削除しました。",
+    "deleteFail": "ジョブの削除に失敗しました。",
+    "metricsFail": "メトリクスを読み込めませんでした。",
+    "noMetrics": "記録されたメトリクスはありません。",
+    "confirm_delete_title": "ジョブを削除",
+    "confirm_delete_msg": "次のジョブを削除してもよろしいですか",
+    "toastStillProcessing": "ジョブ {{id}} はまだ処理中です。後でもう一度更新してください。"
+  },
+
+  "metrics": {
+    "title": "メトリクス — ジョブ",
+    "tokens_in": "トークン（入力）",
+    "tokens_out": "トークン（出力）",
+    "cost_total": "合計コスト",
+    "latency_avg": "平均レイテンシ",
+    "time_total": "合計時間",
+    "destinations": "宛先",
+    "lang": "言語",
+    "status": "ステータス",
+    "tokens_in_col": "入力トークン",
+    "tokens_out_col": "出力トークン",
+    "cost_col": "コスト",
+    "total": "合計",
+    "latency_col": "レイテンシ",
+    "duration_col": "所要時間"
+  },
+
+  "actions": {
+    "create": "作成",
+    "clear": "クリア",
+    "metrics": "メトリクス",
+    "download": "ダウンロード",
+    "downloadZip": "ダウンロード（.zip）",
+    "delete": "削除",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "downloadByLang": "言語別にダウンロード…"
+  },
+
+  "nav": {
+    "home": "ホーム",
+    "jobs": "サービス",
+    "glossaries": "用語集",
+    "settings": "設定",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "logged": "ログイン中",
+    "themeToggle": "テーマを切り替える",
+    "openMenu": "メニューを開く"
+  },
+
+  "auth": {
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "logged": "ログイン中"
+  },
+
+  "theme": { "toggle": "テーマを切り替える" },
+
+  "ui": {
+    "user": "ユーザー",
+    "settings": "設定",
+    "equalToFrom": "「From」と同じ",
+    "noGlossary": "用語集なし",
+    "itemsPerPage": "1ページあたりの項目数",
+    "searchPlaceholder": "IDまたはタイトルで検索...",
+    "loggedIn": "ログイン中"
+  },
+
+  "app": {
+  "loading": "読み込み中…",
+  "saving": "保存中…",
+  "success": "処理が正常に完了しました。",
+  "error": "エラーが発生しました。もう一度お試しください。",
+  "networkError": "ネットワークエラーです。接続を確認してください。",
+  "unauthorized": "セッションの有効期限が切れたか、権限がありません。",
+  "forbidden": "この操作を行う権限がありません。",
+  "notFound": "リソースが見つかりません。",
+  "serverBusy": "サーバーが混雑しています。しばらくしてからお試しください。",
+  "rateLimited": "リクエストが多すぎます。少し待ってから再試行してください。",
+  "offline": "オフラインです。",
+  "required": "必須項目です。",
+  "invalid": "無効な値です。",
+  "tooLarge": "ファイルサイズが大きすぎます。",
+  "unsupported": "未対応の形式です。",
+  "saved": "保存しました。",
+  "updated": "更新しました。",
+  "deleted": "削除しました。",
+  "copied": "クリップボードにコピーしました。",
+  "confirm": "確認",
+  "cancel": "キャンセル",
+  "retry": "再試行",
+  "yes": "はい",
+  "no": "いいえ",
+  "backHome": "ホームに戻る",
+  "loginAgain": "再ログイン"
+  },
+
+  "login": {
+    "title": "アカウントにログイン",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "emailPlaceholder": "you@example.com",
+    "submit": "ログイン",
+    "loading": "ログイン中…",
+    "forgot": "パスワードをお忘れですか？",
+    "recoverAccess": "アクセスを回復する"
+  },
+
+  "recover": {
+    "title": "パスワードをリセットする",
+    "emailPlaceholder": "email@example.com",
+    "submit": "リンクを送信",
+    "loading": "送信中..."
+  },
+
+  "notFound": {
+    "message": "ページが見つかりません。",
+    "backHome": "ホームに戻る"
+  },
+
+  "reset": {
+    "title": "パスワードをリセットする",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "パスワードを確認",
+    "submit": "パスワードをリセット",
+    "loading": "送信中...",
+    "noToken": "トークンがありません。メールのリンクを使用してください。",
+    "success": "パスワードをリセットしました！",
+    "error": {
+      "title": "リセットできませんでした",
+      "mismatch": "パスワードが一致しません"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "ジョブ {{id}} が完了しました — {{done}} 件成功、{{failed}} 件失敗しました。",
+    "jobStillProcessing": "ジョブ {{id}} はまだ処理中です。後でもう一度更新してください。",
+    "login": {
+      "welcomeTitle": "ようこそ！",
+      "welcomeDesc": "正常にログインしました。",
+      "errorTitle": "ログインエラー",
+      "genericError": "ログインに失敗しました。認証情報を確認してください。"
+    },
+    "recover": {
+      "successTitle": "存在する場合は、リンクを送信しました。",
+      "successDesc": "このメールアドレスが登録されていれば、復旧用リンクが送信されます。",
+      "errorTitle": "リクエストエラー",
+      "genericError": "パスワード復旧のリクエストに失敗しました。もう一度お試しください。"
+    }
+  }
+
+
+}

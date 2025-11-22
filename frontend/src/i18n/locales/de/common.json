@@ -1,0 +1,231 @@
+{
+  "common": {
+    "close": "Schließen"
+  },
+
+  "lang": {
+    "select": "Sprache",
+    "de": "Deutsch",
+    "en": "Englisch",
+    "es": "Spanisch",
+    "fr": "Französisch",
+    "it": "Italienisch",
+    "ja": "Japanisch",
+    "nl": "Niederländisch",
+    "pl": "Polnisch",
+    "pt": "Portugiesisch",
+    "ro": "Rumänisch",
+    "zhCN": "Chinesisch (vereinfacht)"
+  },
+
+  "localeNames": {
+    "de-DE": "Deutsch (Deutschland)",
+    "en-US": "Englisch (USA)",
+    "es-ES": "Spanisch (Spanien)",
+    "fr-FR": "Französisch (Frankreich)",
+    "it-IT": "Italienisch (Italien)",
+    "ja-JP": "Japanisch",
+    "nl-NL": "Niederländisch (Niederlande)",
+    "pl-PL": "Polnisch (Polen)",
+    "pt-BR": "Portugiesisch (Brasilien)",
+    "ro-RO": "Rumänisch (Rumänien)",
+    "zh-CN": "Chinesisch (vereinfacht)"
+  },
+
+  "jobs": {
+    "title": "Aufträge",
+    "file": "Datei (DOCX)",
+    "glossary": "Glossar",
+    "from": "Von",
+    "to_multiple": "Nach (mehrere)",
+    "hold_ctrl": "Halte Strg/⌘ gedrückt, um mehrere auszuwählen. Die gleiche Sprache wie „Von“ ist gesperrt.",
+    "noGlossary": "Kein Glossar",
+    "selected": "Ausgewählt:",
+    "sending": "Wird hochgeladen...",
+    "itemsPerPage": "Elemente pro Seite",
+    "searchPlaceholder": "Suche nach ID oder Titel...",
+    "sameAsFrom": "gleich wie „Von“",
+    "okShort": "ok",
+
+    "status": {
+      "done": "abgeschlossen",
+      "processing": "in Bearbeitung",
+      "failed": "fehlgeschlagen",
+      "mixed": "gemischt"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Titel",
+      "status": "Status",
+      "targets": "Ziele",
+      "updated": "Aktualisiert"
+    },
+
+    "loading": "Lädt...",
+    "empty": "Keine Aufträge gefunden",
+    "waiting": "(wartend)",
+    "total": "Gesamt",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "page": "Seite",
+    "fail": "Fehler",
+
+    "needDifferentTarget": "Wähle mindestens ein Ziel, das sich von der Ausgangssprache unterscheidet.",
+    "couldNotCreate": "Auftrag konnte nicht erstellt werden. Überprüfe die Datei und versuche es erneut.",
+    "downloadNotReady": "Ausgabe ist noch nicht bereit oder ein Download-Fehler ist aufgetreten.",
+    "downloadLangFail": "{{lang}} konnte nicht heruntergeladen werden.",
+    "deleted": "Auftrag {{id}} gelöscht.",
+    "deleteFail": "Auftrag konnte nicht gelöscht werden.",
+    "metricsFail": "Metriken konnten nicht geladen werden.",
+    "noMetrics": "Keine Metriken vorhanden.",
+    "confirm_delete_title": "Auftrag löschen",
+    "confirm_delete_msg": "Bist du sicher, dass du den Auftrag löschen möchtest?",
+    "toastStillProcessing": "Auftrag {{id}} wird noch verarbeitet. Bitte versuche es später erneut."
+  },
+
+  "metrics": {
+    "title": "Metriken — Auftrag",
+    "tokens_in": "Tokens (Eingabe)",
+    "tokens_out": "Tokens (Ausgabe)",
+    "cost_total": "Gesamtkosten",
+    "latency_avg": "Durchschnittliche Latenz",
+    "time_total": "Gesamtzeit",
+    "destinations": "Ziele",
+    "lang": "Sprache",
+    "status": "Status",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Kosten",
+    "total": "gesamt",
+    "latency_col": "Latenz",
+    "duration_col": "Dauer"
+  },
+
+  "actions": {
+    "create": "Erstellen",
+    "clear": "Leeren",
+    "metrics": "Metriken",
+    "download": "Download",
+    "downloadZip": "Download (.zip)",
+    "delete": "Löschen",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "downloadByLang": "Nach Sprache herunterladen…"
+  },
+
+  "nav": {
+    "home": "Startseite",
+    "jobs": "Dienste",
+    "glossaries": "Glossare",
+    "settings": "Einstellungen",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "logged": "Angemeldet",
+    "themeToggle": "Thema wechseln",
+    "openMenu": "Menü öffnen"
+  },
+
+  "auth": {
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "logged": "Angemeldet"
+  },
+
+  "theme": { "toggle": "Thema wechseln" },
+
+  "ui": {
+    "user": "Benutzer",
+    "settings": "Einstellungen",
+    "equalToFrom": "gleich wie 'Von'",
+    "noGlossary": "Kein Glossar",
+    "itemsPerPage": "Elemente pro Seite",
+    "searchPlaceholder": "Nach ID oder Titel suchen...",
+    "loggedIn": "Angemeldet"
+  },
+
+  "app": {
+  "loading": "Wird geladen …",
+  "saving": "Speichern …",
+  "success": "Vorgang erfolgreich abgeschlossen.",
+  "error": "Es ist ein Fehler aufgetreten. Bitte erneut versuchen.",
+  "networkError": "Netzwerkfehler. Verbindung prüfen.",
+  "unauthorized": "Sitzung abgelaufen oder nicht autorisiert.",
+  "forbidden": "Keine Berechtigung für diese Aktion.",
+  "notFound": "Ressource nicht gefunden.",
+  "serverBusy": "Server ausgelastet. Bitte später erneut versuchen.",
+  "rateLimited": "Zu viele Anfragen. Bitte kurz warten.",
+  "offline": "Sie sind offline.",
+  "required": "Pflichtfeld.",
+  "invalid": "Ungültiger Wert.",
+  "tooLarge": "Datei zu groß.",
+  "unsupported": "Format wird nicht unterstützt.",
+  "saved": "Gespeichert.",
+  "updated": "Aktualisiert.",
+  "deleted": "Gelöscht.",
+  "copied": "In die Zwischenablage kopiert.",
+  "confirm": "Bestätigen",
+  "cancel": "Abbrechen",
+  "retry": "Erneut versuchen",
+  "yes": "Ja",
+  "no": "Nein",
+  "backHome": "Zur Startseite",
+  "loginAgain": "Erneut anmelden"
+  },
+
+  "login": {
+    "title": "Konto anmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Anmelden",
+    "loading": "Wird angemeldet…",
+    "forgot": "Passwort vergessen?",
+    "recoverAccess": "Zugang wiederherstellen"
+  },
+
+  "recover": {
+    "title": "Passwort zurücksetzen",
+    "emailPlaceholder": "email@beispiel.de",
+    "submit": "Link senden",
+    "loading": "Wird gesendet..."
+  },
+
+  "notFound": {
+    "message": "Seite nicht gefunden.",
+    "backHome": "Zurück zur Startseite"
+  },
+
+  "reset": {
+    "title": "Passwort zurücksetzen",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "submit": "Passwort zurücksetzen",
+    "loading": "Wird gesendet...",
+    "noToken": "Token fehlt. Verwenden Sie den Link aus der E-Mail.",
+    "success": "Passwort zurückgesetzt!",
+    "error": {
+      "title": "Passwort konnte nicht zurückgesetzt werden",
+      "mismatch": "Passwörter stimmen nicht überein"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Job {{id}} abgeschlossen – {{done}} erfolgreich, {{failed}} mit Fehlern.",
+    "jobStillProcessing": "Job {{id}} wird noch verarbeitet. Bitte später aktualisieren.",
+    "login": {
+      "welcomeTitle": "Willkommen!",
+      "welcomeDesc": "Anmeldung erfolgreich.",
+      "errorTitle": "Anmeldefehler",
+      "genericError": "Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Zugangsdaten."
+    },
+    "recover": {
+      "successTitle": "Falls vorhanden, haben wir den Link gesendet.",
+      "successDesc": "Wenn diese E-Mail registriert ist, erhalten Sie einen Wiederherstellungslink.",
+      "errorTitle": "Fehler bei der Anforderung",
+      "genericError": "Passwortwiederherstellung fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  }
+
+
+}

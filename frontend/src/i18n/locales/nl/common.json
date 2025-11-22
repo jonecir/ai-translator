@@ -1,0 +1,231 @@
+{
+  "common": {
+    "close": "Sluiten"
+  },
+
+  "lang": {
+    "select": "Taal",
+    "pt": "Portugees",
+    "en": "Engels",
+    "es": "Spaans",
+    "it": "Italiaans",
+    "de": "Duits",
+    "fr": "Frans",
+    "ro": "Roemeens",
+    "ja": "Japans",
+    "zhCN": "Chinees (vereenvoudigd)",
+    "nl": "Nederlands",
+    "pl": "Pools"
+  },
+
+  "localeNames": {
+    "de-DE": "Duits (Duitsland)",
+    "en-US": "Engels (VS)",
+    "es-ES": "Spaans (Spanje)",
+    "fr-FR": "Frans (Frankrijk)",
+    "it-IT": "Italiaans (Italië)",
+    "ja-JP": "Japans",
+    "nl-NL": "Nederlands (Nederland)",
+    "pl-PL": "Pools (Polen)",
+    "pt-BR": "Portugees (Brazilië)",
+    "ro-RO": "Roemeens (Roemenië)",
+    "zh-CN": "Chinees (vereenvoudigd)"
+  },
+
+  "jobs": {
+    "title": "Taken",
+    "file": "Bestand (DOCX)",
+    "glossary": "Woordenlijst",
+    "from": "Van",
+    "to_multiple": "Naar (meerdere)",
+    "hold_ctrl": "Houd Ctrl/⌘ ingedrukt om meerdere te selecteren. Dezelfde taal als ‘Van’ is geblokkeerd.",
+    "noGlossary": "Geen woordenlijst",
+    "selected": "Geselecteerd:",
+    "sending": "Bezig met uploaden...",
+    "itemsPerPage": "Items per pagina",
+    "searchPlaceholder": "Zoek op ID of titel...",
+    "sameAsFrom": "hetzelfde als 'Van'",
+    "okShort": "ok",
+
+    "status": {
+      "done": "voltooid",
+      "processing": "bezig",
+      "failed": "mislukt",
+      "mixed": "gemengd"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Titel",
+      "status": "Status",
+      "targets": "Doelen",
+      "updated": "Bijgewerkt"
+    },
+
+    "loading": "Laden...",
+    "empty": "Geen taken gevonden",
+    "waiting": "(in afwachting)",
+    "total": "Totaal",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "page": "Pagina",
+    "fail": "fout",
+
+    "needDifferentTarget": "Selecteer minstens één doeltaal die verschilt van de brontaal.",
+    "couldNotCreate": "Taak kon niet worden gemaakt. Controleer het bestand en probeer opnieuw.",
+    "downloadNotReady": "Uitvoer is nog niet gereed of er is een downloadfout opgetreden.",
+    "downloadLangFail": "Downloaden van {{lang}} mislukt",
+    "deleted": "Taak {{id}} verwijderd.",
+    "deleteFail": "Kon taak niet verwijderen.",
+    "metricsFail": "Kon statistieken niet laden.",
+    "noMetrics": "Geen geregistreerde statistieken.",
+    "confirm_delete_title": "Taak verwijderen",
+    "confirm_delete_msg": "Weet u zeker dat u deze taak wilt verwijderen?",
+    "toastStillProcessing": "Taak {{id}} wordt nog verwerkt. Probeer het later opnieuw."
+  },
+
+  "metrics": {
+    "title": "Statistieken — Taak",
+    "tokens_in": "Tokens (invoer)",
+    "tokens_out": "Tokens (uitvoer)",
+    "cost_total": "Totale kosten",
+    "latency_avg": "Gemiddelde vertraging",
+    "time_total": "Totale tijd",
+    "destinations": "Doelen",
+    "lang": "Taal",
+    "status": "Status",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens uit",
+    "cost_col": "Kosten",
+    "total": "totaal",
+    "latency_col": "Vertraging",
+    "duration_col": "Duur"
+  },
+
+  "actions": {
+    "create": "Aanmaken",
+    "clear": "Wissen",
+    "metrics": "Statistieken",
+    "download": "Download",
+    "downloadZip": "Download (.zip)",
+    "delete": "Verwijderen",
+    "confirm": "Bevestigen",
+    "cancel": "Annuleren",
+    "downloadByLang": "Download per taal…"
+  },
+
+  "nav": {
+    "home": "Start",
+    "jobs": "Diensten",
+    "glossaries": "Woordenlijsten",
+    "settings": "Instellingen",
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "logged": "Ingelogd",
+    "themeToggle": "Thema wisselen",
+    "openMenu": "Menu openen"
+  },
+
+  "auth": {
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "logged": "Ingelogd"
+  },
+
+  "theme": { "toggle": "Thema wisselen" },
+
+  "ui": {
+    "user": "Gebruiker",
+    "settings": "Instellingen",
+    "equalToFrom": "gelijk aan 'Van'",
+    "noGlossary": "Geen woordenlijst",
+    "itemsPerPage": "Items per pagina",
+    "searchPlaceholder": "Zoek op ID of titel...",
+    "loggedIn": "Ingelogd"
+  },
+
+  "app": {
+  "loading": "Bezig met laden…",
+  "saving": "Bezig met opslaan…",
+  "success": "Handeling succesvol voltooid.",
+  "error": "Er is iets misgegaan. Probeer het opnieuw.",
+  "networkError": "Netwerkfout. Controleer je verbinding.",
+  "unauthorized": "Sessie verlopen of niet gemachtigd.",
+  "forbidden": "Je hebt geen toestemming voor deze actie.",
+  "notFound": "Bron niet gevonden.",
+  "serverBusy": "Server is bezig. Probeer het zo weer.",
+  "rateLimited": "Te veel verzoeken. Wacht even.",
+  "offline": "Je bent offline.",
+  "required": "Verplicht veld.",
+  "invalid": "Ongeldige waarde.",
+  "tooLarge": "Bestand te groot.",
+  "unsupported": "Niet-ondersteund formaat.",
+  "saved": "Opgeslagen.",
+  "updated": "Bijgewerkt.",
+  "deleted": "Verwijderd.",
+  "copied": "Gekopieerd naar klembord.",
+  "confirm": "Bevestigen",
+  "cancel": "Annuleren",
+  "retry": "Opnieuw proberen",
+  "yes": "Ja",
+  "no": "Nee",
+  "backHome": "Terug naar start",
+  "loginAgain": "Opnieuw inloggen"
+  },
+
+  "login": {
+    "title": "Inloggen op account",
+    "email": "E-mailadres",
+    "password": "Wachtwoord",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Inloggen",
+    "loading": "Bezig met inloggen…",
+    "forgot": "Wachtwoord vergeten?",
+    "recoverAccess": "Toegang herstellen"
+  },
+
+  "recover": {
+    "title": "Wachtwoord herstellen",
+    "emailPlaceholder": "email@voorbeeld.com",
+    "submit": "Link versturen",
+    "loading": "Bezig met verzenden..."
+  },
+
+  "notFound": {
+    "message": "Pagina niet gevonden.",
+    "backHome": "Terug naar Home"
+  },
+
+  "reset": {
+    "title": "Wachtwoord resetten",
+    "newPassword": "Nieuw wachtwoord",
+    "confirmPassword": "Bevestig wachtwoord",
+    "submit": "Wachtwoord resetten",
+    "loading": "Bezig met verzenden...",
+    "noToken": "Token ontbreekt. Gebruik de link uit de e-mail.",
+    "success": "Wachtwoord gereset!",
+    "error": {
+      "title": "Kan wachtwoord niet resetten",
+      "mismatch": "Wachtwoorden komen niet overeen"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Job {{id}} voltooid — {{done}} geslaagd, {{failed}} met fouten.",
+    "jobStillProcessing": "Job {{id}} wordt nog verwerkt. Vernieuw later opnieuw.",
+    "login": {
+      "welcomeTitle": "Welkom!",
+      "welcomeDesc": "Je bent succesvol ingelogd.",
+      "errorTitle": "Inlogfout",
+      "genericError": "Inloggen is mislukt. Controleer je inloggegevens."
+    },
+    "recover": {
+      "successTitle": "Als het bestaat, hebben we de link verstuurd.",
+      "successDesc": "Als dit e-mailadres geregistreerd is, ontvang je een herstel-link.",
+      "errorTitle": "Fout bij het aanvragen",
+      "genericError": "Het aanvragen van wachtwoordherstel is mislukt. Probeer het opnieuw."
+    }
+  }
+
+
+}

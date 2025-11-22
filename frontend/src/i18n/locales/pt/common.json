@@ -1,0 +1,236 @@
+{
+  "common": {
+    "close": "Fechar"
+  },
+
+  "lang": {
+    "select": "Idioma",
+    "de": "Alemão",
+    "en": "Inglês",
+    "es": "Espanhol",
+    "fr": "Francês",
+    "ja": "Japonês",
+    "it": "Italiano",
+    "nl": "Holandês",
+    "pl": "Polonês",
+    "pt": "Português",
+    "ro": "Romeno",
+    "zhCN": "Chinês (simplificado)"
+  },
+
+  "localeNames": {
+    "de-DE": "Alemão (Alemanha)",
+    "en-US": "Inglês (US)",
+    "es-ES": "Espanhol (Espanha)",
+    "fr-FR": "Francês (França)",
+    "ja-JP": "Japonês",
+    "it-IT": "Italiano (Itália)",
+    "nl-NL": "Holandês (Países Baixos)",
+    "pl-PL": "Polonês (Polônia)",
+    "pt-BR": "Português (Brasil)",
+    "ro-RO": "Romeno (Romênia)",
+    "zh-CN": "Chinês (simplificado)"
+  },
+
+  "nav": {
+    "home": "Home",
+    "jobs": "Serviços",
+    "glossaries": "Glossários",
+    "settings": "Configurações",
+    "login": "Entrar",
+    "logout": "Sair",
+    "logged": "Logado",
+    "themeToggle": "Alternar tema",
+    "openMenu": "Abrir menu"
+  },
+
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "logged": "Logado"
+  },
+  
+  "theme": { "toggle": "Alternar tema" },
+
+  "userMenu": {
+    "title": "Conta",
+    "settings": "Configurações",
+    "logout": "Sair"
+  },
+
+  "jobs": {
+    "title": "Serviços",
+    "file": "Arquivo (DOCX)",
+    "glossary": "Glossário",
+    "from": "De",
+    "to_multiple": "Para (múltiplos)",
+    "hold_ctrl": "Segure Ctrl/⌘ para selecionar vários. O idioma igual ao “De” é bloqueado.",
+    "noGlossary": "Sem glossário",
+    "selected": "Selecionado:",
+    "sending": "Enviando...",
+    "itemsPerPage": "Itens por página",
+    "searchPlaceholder": "Buscar por ID ou título...",
+    "sameAsFrom": "igual ao 'De'",
+    "okShort": "ok",
+
+    "status": {
+      "done": "concluído",
+      "processing": "processando",
+      "failed": "falhou",
+      "mixed": "misto"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Título",
+      "status": "Situação",
+      "targets": "Destinos",
+      "updated": "Atualizado"
+    },
+
+    "loading": "Carregando...",
+    "empty": "Nenhum job encontrado",
+    "waiting": "(aguardando)",
+    "total": "Total",
+    "prev": "Anterior",
+    "next": "Próxima",
+    "page": "Página",
+    "fail": "falha",
+
+    "needDifferentTarget": "Selecione pelo menos 1 destino diferente do idioma de origem.",
+    "couldNotCreate": "Não foi possível criar o job. Verifique o arquivo e tente novamente.",
+    "downloadNotReady": "Saída ainda não está pronta ou ocorreu um erro no download.",
+    "downloadLangFail": "Falha ao baixar {{lang}}",
+    "deleted": "Job {{id}} excluído.",
+    "deleteFail": "Falha ao excluir o job.",
+    "metricsFail": "Não foi possível carregar as métricas.",
+    "noMetrics": "Sem métricas registradas.",
+    "confirm_delete_title": "Excluir job",
+    "confirm_delete_msg": "Tem certeza que deseja excluir o job",
+    "toastStillProcessing": "Job {{id}} ainda em processamento. Atualize mais tarde."
+  },
+
+  "metrics": {
+    "title": "Métricas — Job",
+    "tokens_in": "Tokens (entrada)",
+    "tokens_out": "Tokens (saída)",
+    "cost_total": "Custo total",
+    "latency_avg": "Latência média",
+    "time_total": "Tempo total",
+    "destinations": "Destinos",
+    "lang": "Idioma",
+    "status": "Situação",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Custo",
+    "total": "total",
+    "latency_col": "Latência",
+    "duration_col": "Duração"
+  },
+
+  "actions": {
+    "create": "Criar",
+    "clear": "Limpar",
+    "metrics": "Métricas",
+    "download": "Download",
+    "downloadZip": "Download (.zip)",
+    "delete": "Excluir",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "downloadByLang": "Baixar por idioma…"
+  },
+
+  "ui": {
+    "user": "Usuário",
+    "settings": "Configurações",
+    "equalToFrom": "igual ao \"De\"",
+    "noGlossary": "Sem glossário",
+    "itemsPerPage": "Itens por página",
+    "searchPlaceholder": "Buscar por ID ou título...",
+    "loggedIn": "Logado"
+  },
+
+  "app": {
+  "loading": "Carregando…",
+  "saving": "Salvando…",
+  "success": "Operação concluída com sucesso.",
+  "error": "Ocorreu um erro. Tente novamente.",
+  "networkError": "Falha de rede. Verifique sua conexão.",
+  "unauthorized": "Sessão expirada ou não autorizada.",
+  "forbidden": "Você não tem permissão para esta ação.",
+  "notFound": "Recurso não encontrado.",
+  "serverBusy": "Servidor ocupado. Tente novamente em instantes.",
+  "rateLimited": "Muitas solicitações. Aguarde um momento.",
+  "offline": "Você está offline.",
+  "required": "Campo obrigatório.",
+  "invalid": "Valor inválido.",
+  "tooLarge": "Arquivo muito grande.",
+  "unsupported": "Formato não suportado.",
+  "saved": "Salvo.",
+  "updated": "Atualizado.",
+  "deleted": "Excluído.",
+  "copied": "Copiado para a área de transferência.",
+  "confirm": "Confirmar",
+  "cancel": "Cancelar",
+  "retry": "Tentar novamente",
+  "yes": "Sim",
+  "no": "Não",
+  "backHome": "Voltar ao início",
+  "loginAgain": "Entrar novamente"
+  },
+  
+  "login": {
+    "title": "Acessar conta",
+    "email": "Email",
+    "password": "Senha",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Entrar",
+    "loading": "Entrando…",
+    "forgot": "Esqueceu a senha?",
+    "recoverAccess": "Recuperar acesso"
+  },
+
+  "recover": {
+    "title": "Recuperar senha",
+    "emailPlaceholder": "email@exemplo.com",
+    "submit": "Enviar link",
+    "loading": "Enviando..."
+  },
+
+  "notFound": {
+    "message": "Página não encontrada.",
+    "backHome": "Voltar para a Home"
+  },
+
+  "reset": {
+    "title": "Redefinir senha",
+    "newPassword": "Nova senha",
+    "confirmPassword": "Confirmar senha",
+    "submit": "Resetar senha",
+    "loading": "Enviando...",
+    "noToken": "Token ausente. Use o link enviado por email.",
+    "success": "Senha redefinida!",
+    "error": {
+      "title": "Não foi possível redefinir",
+      "mismatch": "As senhas não coincidem"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Job {{id}} finalizado — {{done}} concluído(s), {{failed}} com erro.",
+    "jobStillProcessing": "Job {{id}} ainda em processamento. Atualize mais tarde.",
+    "login": {
+      "welcomeTitle": "Bem-vindo!",
+      "welcomeDesc": "Login realizado com sucesso.",
+      "errorTitle": "Erro no login",
+      "genericError": "Falha no login. Verifique suas credenciais."
+    },
+    "recover": {
+      "successTitle": "Se existir, enviamos o link.",
+      "successDesc": "Se o email estiver cadastrado, você receberá um link de recuperação.",
+      "errorTitle": "Erro ao solicitar",
+      "genericError": "Não foi possível solicitar a recuperação. Tente novamente."
+    }
+  }
+
+}

@@ -1,0 +1,232 @@
+{
+  "common": {
+    "close": "关闭"
+  },
+
+  "lang": {
+    "select": "语言",
+    "de": "德语",
+    "en": "英语",
+    "es": "西班牙语",
+    "fr": "法语",
+    "it": "意大利语",
+    "ja": "日语",
+    "nl": "荷兰语",
+    "pl": "波兰语",
+    "pt": "葡萄牙语",
+    "ro": "罗马尼亚语",
+    "zhCN": "中文（简体）"
+  },
+
+  "localeNames": {
+    "de-DE": "德语（德国）",
+    "en-US": "英语（美国）",
+    "es-ES": "西班牙语（西班牙）",
+    "fr-FR": "法语（法国）",
+    "it-IT": "意大利语（意大利）",
+    "ja-JP": "日语",
+    "nl-NL": "荷兰语（荷兰）",
+    "pl-PL": "波兰语（波兰）",
+    "pt-BR": "葡萄牙语（巴西）",
+    "ro-RO": "罗马尼亚语（罗马尼亚）",
+    "zh-CN": "中文（简体）"
+  },
+
+  "jobs": {
+    "title": "作业",
+    "file": "文件（DOCX）",
+    "glossary": "术语表",
+    "from": "源语言",
+    "to_multiple": "目标语言（可多选）",
+    "hold_ctrl": "按住 Ctrl/⌘ 可多选。与“源语言”相同的语言不可选择。",
+    "noGlossary": "无术语表",
+    "selected": "已选择：",
+    "sending": "正在发送…",
+    "itemsPerPage": "每页条数",
+    "searchPlaceholder": "按 ID 或标题搜索…",
+    "sameAsFrom": "与“源语言”相同",
+    "okShort": "ok",
+
+    "status": {
+      "done": "已完成",
+      "processing": "处理中",
+      "failed": "失败",
+      "mixed": "混合"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "标题",
+      "status": "状态",
+      "targets": "目标",
+      "updated": "更新时间"
+    },
+
+    "loading": "正在加载…",
+    "empty": "未找到作业",
+    "waiting": "（等待中）",
+    "total": "总计",
+    "prev": "上一页",
+    "next": "下一页",
+    "page": "页",
+    "fail": "失败",
+
+    "needDifferentTarget": "请至少选择一个与源语言不同的目标语言。",
+    "couldNotCreate": "无法创建作业。请检查文件后重试。",
+    "downloadNotReady": "输出尚未准备好，或下载时发生错误。",
+    "downloadLangFail": "下载 {{lang}} 失败",
+    "deleted": "已删除作业 {{id}}。",
+    "deleteFail": "删除作业失败。",
+    "metricsFail": "无法加载指标。",
+    "noMetrics": "没有记录的指标。",
+    "confirm_delete_title": "删除作业",
+    "confirm_delete_msg": "确定要删除作业",
+    "toastStillProcessing": "作业 {{id}} 仍在处理。请稍后刷新。"
+  },
+
+  "metrics": {
+    "title": "指标 — 作业",
+    "tokens_in": "令牌（输入）",
+    "tokens_out": "令牌（输出）",
+    "cost_total": "总成本",
+    "latency_avg": "平均延迟",
+    "time_total": "总时间",
+    "destinations": "目标",
+    "lang": "语言",
+    "status": "状态",
+    "tokens_in_col": "输入令牌",
+    "tokens_out_col": "输出令牌",
+    "cost_col": "成本",
+    "total": "总计",
+    "latency_col": "延迟",
+    "duration_col": "时长"
+  },
+
+  "actions": {
+    "create": "创建",
+    "clear": "清除",
+    "metrics": "指标",
+    "download": "下载",
+    "downloadZip": "下载（.zip）",
+    "delete": "删除",
+    "confirm": "确认",
+    "cancel": "取消",
+    "downloadByLang": "按语言下载…"
+  },
+
+  "nav": {
+    "home": "首页",
+    "jobs": "服务",
+    "glossaries": "术语表",
+    "settings": "设置",
+    "login": "登录",
+    "logout": "登出",
+    "logged": "已登录",
+    "themeToggle": "切换主题",
+    "openMenu": "打开菜单"
+  },
+
+  "auth": {
+    "login": "登录",
+    "logout": "登出",
+    "logged": "已登录"
+  },
+
+  "theme": { "toggle": "切换主题" },
+
+  "ui": {
+    "user": "用户",
+    "settings": "设置",
+    "equalToFrom": "等于“源语言”",
+    "noGlossary": "无术语表",
+    "itemsPerPage": "每页项目数",
+    "searchPlaceholder": "按ID或标题搜索...",
+    "loggedIn": "已登录"
+  },
+
+  "app": {
+  "loading": "正在加载…",
+  "saving": "正在保存…",
+  "success": "操作已成功完成。",
+  "error": "发生错误，请重试。",
+  "networkError": "网络错误，请检查连接。",
+  "unauthorized": "会话已过期或未授权。",
+  "forbidden": "您没有执行此操作的权限。",
+  "notFound": "资源未找到。",
+  "serverBusy": "服务器繁忙，请稍后再试。",
+  "rateLimited": "请求过多，请稍候。",
+  "offline": "您当前处于离线状态。",
+  "required": "必填项。",
+  "invalid": "无效的值。",
+  "tooLarge": "文件过大。",
+  "unsupported": "不支持的格式。",
+  "saved": "已保存。",
+  "updated": "已更新。",
+  "deleted": "已删除。",
+  "copied": "已复制到剪贴板。",
+  "confirm": "确定",
+  "cancel": "取消",
+  "retry": "重试",
+  "yes": "是",
+  "no": "否",
+  "backHome": "返回首页",
+  "loginAgain": "重新登录"
+  },
+
+  "login": {
+    "title": "登录账户",
+    "email": "邮箱",
+    "password": "密码",
+    "emailPlaceholder": "you@example.com",
+    "submit": "登录",
+    "loading": "正在登录…",
+    "forgot": "忘记密码？",
+    "recoverAccess": "找回账户"
+  },
+
+  "recover": {
+    "title": "找回密码",
+    "emailPlaceholder": "email@example.com",
+    "submit": "发送链接",
+    "loading": "正在发送..."
+  },
+
+  "notFound": {
+    "message": "页面未找到。",
+    "backHome": "返回首页"
+  },
+
+  "reset": {
+    "title": "重置密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "submit": "重置密码",
+    "loading": "发送中...",
+    "noToken": "缺少令牌。请使用邮件中的链接。",
+    "success": "密码已重置！",
+    "error": {
+      "title": "无法重置密码",
+      "mismatch": "两次输入的密码不一致"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "任务 {{id}} 已完成 — {{done}} 个成功，{{failed}} 个失败。",
+    "jobStillProcessing": "任务 {{id}} 仍在处理中。请稍后刷新。",
+    "login": {
+      "welcomeTitle": "欢迎！",
+      "welcomeDesc": "登录成功。",
+      "errorTitle": "登录错误",
+      "genericError": "登录失败。请检查您的凭据。"
+    },
+    "recover": {
+      "successTitle": "如果存在，我们已发送链接。",
+      "successDesc": "如果该邮箱已注册，您将收到一封找回密码的链接邮件。",
+      "errorTitle": "请求出错",
+      "genericError": "无法发起找回密码请求。请稍后再试。"
+    }
+  }
+
+
+
+}

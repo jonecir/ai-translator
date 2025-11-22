@@ -1,0 +1,230 @@
+{
+  "common": {
+    "close": "Close"
+  },
+
+    "lang": {
+    "select": "Language",
+    "de": "German",
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "it": "Italian",
+    "ja": "Japanese",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "pt": "Portuguese",
+    "ro": "Romanian",
+    "zhCN": "Chinese (Simplified)"
+  },
+
+  "localeNames": {
+    "de-DE": "German (Germany)",
+    "en-US": "English (US)",
+    "es-ES": "Spanish (Spain)",
+    "fr-FR": "French (France)",
+    "ja-JP": "Japanese",
+    "it-IT": "Italian (Italy)",
+    "nl-NL": "Dutch (Netherlands)",
+    "pl-PL": "Polish (Poland)",
+    "pt-BR": "Portuguese (Brazil)",
+    "ro-RO": "Romanian (Romania)",
+    "zh-CN": "Chinese (Simplified)"
+  },
+
+  "jobs": {
+    "title": "Jobs",
+    "file": "File (DOCX)",
+    "glossary": "Glossary",
+    "from": "From",
+    "to_multiple": "To (multiple)",
+    "hold_ctrl": "Hold Ctrl/⌘ to select multiple. The same language as “From” is blocked.",
+    "noGlossary": "No glossary",
+    "selected": "Selected:",
+    "sending": "Uploading...",
+    "itemsPerPage": "Items per page",
+    "searchPlaceholder": "Search by ID or title...",
+    "sameAsFrom": "same as 'From'",
+    "okShort": "ok",
+
+    "status": {
+      "done": "done",
+      "processing": "processing",
+      "failed": "failed",
+      "mixed": "mixed"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Title",
+      "status": "Status",
+      "targets": "Targets",
+      "updated": "Updated"
+    },
+
+    "loading": "Loading...",
+    "empty": "No jobs found",
+    "waiting": "(waiting)",
+    "total": "Total",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "fail": "fail",
+
+    "needDifferentTarget": "Select at least one target different from the source language.",
+    "couldNotCreate": "Couldn't create the job. Check the file and try again.",
+    "downloadNotReady": "Output isn't ready yet or a download error occurred.",
+    "downloadLangFail": "Failed to download {{lang}}",
+    "deleted": "Job {{id}} deleted.",
+    "deleteFail": "Failed to delete the job.",
+    "metricsFail": "Couldn't load metrics.",
+    "noMetrics": "No metrics recorded.",
+    "confirm_delete_title": "Delete job",
+    "confirm_delete_msg": "Are you sure you want to delete job",
+    "toastStillProcessing": "Job {{id}} is still processing. Please try again later."
+  },
+
+  "metrics": {
+    "title": "Metrics — Job",
+    "tokens_in": "Tokens (input)",
+    "tokens_out": "Tokens (output)",
+    "cost_total": "Total cost",
+    "latency_avg": "Average latency",
+    "time_total": "Total time",
+    "destinations": "Destinations",
+    "lang": "Language",
+    "status": "Status",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Cost",
+    "total": "total",
+    "latency_col": "Latency",
+    "duration_col": "Duration"
+  },
+
+  "actions": {
+    "create": "Create",
+    "clear": "Clear",
+    "metrics": "Metrics",
+    "download": "Download",
+    "downloadZip": "Download (.zip)",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "downloadByLang": "Download by language…"
+  },
+
+  "nav": {
+    "home": "Home",
+    "jobs": "Jobs",
+    "glossaries": "Glossaries",
+    "settings": "Settings",
+    "login": "Login",
+    "logout": "Logout",
+    "logged": "Logged in",
+    "themeToggle": "Toggle theme",
+    "openMenu": "Open menu"
+  },
+
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "logged": "Logged in"
+  },
+
+  "theme": { "toggle": "Toggle theme" },
+  "ui": {
+    "user": "User",
+    "settings": "Settings",
+    "equalToFrom": "equal to 'From'",
+    "noGlossary": "No glossary",
+    "itemsPerPage": "Items per page",
+    "searchPlaceholder": "Search by ID or title...",
+    "loggedIn": "Logged in"
+  },
+
+  "app": {
+  "loading": "Loading…",
+  "saving": "Saving…",
+  "success": "Operation completed successfully.",
+  "error": "Something went wrong. Please try again.",
+  "networkError": "Network error. Check your connection.",
+  "unauthorized": "Session expired or unauthorized.",
+  "forbidden": "You don’t have permission for this action.",
+  "notFound": "Resource not found.",
+  "serverBusy": "Server is busy. Please try again shortly.",
+  "rateLimited": "Too many requests. Please wait a moment.",
+  "offline": "You are offline.",
+  "required": "Required field.",
+  "invalid": "Invalid value.",
+  "tooLarge": "File too large.",
+  "unsupported": "Unsupported format.",
+  "saved": "Saved.",
+  "updated": "Updated.",
+  "deleted": "Deleted.",
+  "copied": "Copied to clipboard.",
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "retry": "Retry",
+  "yes": "Yes",
+  "no": "No",
+  "backHome": "Back to home",
+  "loginAgain": "Log in again"
+  },
+
+  "login": {
+    "title": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Sign in",
+    "loading": "Signing in…",
+    "forgot": "Forgot your password?",
+    "recoverAccess": "Recover access"
+  },
+  
+  "recover": {
+    "title": "Recover password",
+    "emailPlaceholder": "email@example.com",
+    "submit": "Send link",
+    "loading": "Sending..."
+  },
+
+  "notFound": {
+    "message": "Page not found.",
+    "backHome": "Back to Home"
+  },
+
+  "reset": {
+    "title": "Reset password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "submit": "Reset password",
+    "loading": "Sending...",
+    "noToken": "Missing token. Use the link from the email.",
+    "success": "Password reset!",
+    "error": {
+      "title": "Could not reset password",
+      "mismatch": "Passwords do not match"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Job {{id}} finished — {{done}} completed, {{failed}} failed.",
+    "jobStillProcessing": "Job {{id}} is still processing. Please refresh later.",
+    "login": {
+      "welcomeTitle": "Welcome!",
+      "welcomeDesc": "You have signed in successfully.",
+      "errorTitle": "Login error",
+      "genericError": "Login failed. Please check your credentials."
+    },
+    "recover": {
+      "successTitle": "If it exists, we sent the link.",
+      "successDesc": "If this email is registered, you will receive a recovery link.",
+      "errorTitle": "Error requesting recovery",
+      "genericError": "Could not request password recovery. Please try again."
+    }
+  }
+
+
+}

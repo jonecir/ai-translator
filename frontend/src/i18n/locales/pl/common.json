@@ -1,0 +1,231 @@
+{
+  "common": {
+    "close": "Închide"
+  },
+
+  "lang": {
+    "select": "Język",
+    "de": "Niemiecki",
+    "en": "Angielski",
+    "es": "Hiszpański",
+    "fr": "Francuski",
+    "it": "Włoski",
+    "ja": "Japoński",
+    "nl": "Holenderski",
+    "pl": "Polski",
+    "pt": "Portugalski",
+    "ro": "Rumuński",
+    "zhCN": "Chiński (uproszczony)"
+  },
+
+  "localeNames": {
+    "de-DE": "Niemiecki (Niemcy)",
+    "en-US": "Angielski (USA)",
+    "es-ES": "Hiszpański (Hiszpania)",
+    "fr-FR": "Francuski (Francja)",
+    "it-IT": "Włoski (Włochy)",
+    "ja-JP": "Japoński",
+    "nl-NL": "Niderlandzki (Niderlandy)",
+    "pl-PL": "Polski (Polska)",
+    "pt-BR": "Portugalski (Brazylia)",
+    "ro-RO": "Rumuński (Rumunia)",
+    "zh-CN": "Chiński (uproszczony)"
+  },
+
+  "jobs": {
+    "title": "Sarcini",
+    "file": "Fișier (DOCX)",
+    "glossary": "Glosar",
+    "from": "Din",
+    "to_multiple": "Către (multiple)",
+    "hold_ctrl": "Ține apăsat Ctrl/⌘ pentru a selecta mai multe. Limba identică cu „Din” este blocată.",
+    "noGlossary": "Fără glosar",
+    "selected": "Selectat:",
+    "sending": "Se încarcă...",
+    "itemsPerPage": "Elemente pe pagină",
+    "searchPlaceholder": "Caută după ID sau titlu...",
+    "sameAsFrom": "tak samo jak „Z”",
+    "okShort": "ok",
+
+    "status": {
+      "done": "finalizat",
+      "processing": "în procesare",
+      "failed": "eșuat",
+      "mixed": "mixt"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Titlu",
+      "status": "Stare",
+      "targets": "Ținte",
+      "updated": "Actualizat"
+    },
+
+    "loading": "Se încarcă...",
+    "empty": "Nicio sarcină găsită",
+    "waiting": "(în așteptare)",
+    "total": "Total",
+    "prev": "Înapoi",
+    "next": "Înainte",
+    "page": "Pagină",
+    "fail": "eroare",
+
+    "needDifferentTarget": "Selectează cel puțin o limbă țintă diferită de cea sursă.",
+    "couldNotCreate": "Nu s-a putut crea sarcina. Verifică fișierul și încearcă din nou.",
+    "downloadNotReady": "Rezultatul nu este încă pregătit sau a apărut o eroare la descărcare.",
+    "downloadLangFail": "Eroare la descărcarea {{lang}}",
+    "deleted": "Sarcina {{id}} a fost ștearsă.",
+    "deleteFail": "Nu s-a putut șterge sarcina.",
+    "metricsFail": "Nu s-au putut încărca metricile.",
+    "noMetrics": "Nu există metrici înregistrate.",
+    "confirm_delete_title": "Ștergere sarcină",
+    "confirm_delete_msg": "Ești sigur că vrei să ștergi sarcina",
+    "toastStillProcessing": "Sarcina {{id}} este încă în procesare. Încearcă mai târziu."
+  },
+
+  "metrics": {
+    "title": "Metrici — Sarcină",
+    "tokens_in": "Token-uri (intrare)",
+    "tokens_out": "Token-uri (ieșire)",
+    "cost_total": "Cost total",
+    "latency_avg": "Latență medie",
+    "time_total": "Timp total",
+    "destinations": "Ținte",
+    "lang": "Limbă",
+    "status": "Stare",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Cost",
+    "total": "razem",
+    "latency_col": "Latență",
+    "duration_col": "Durată"
+  },
+
+  "actions": {
+    "create": "Creează",
+    "clear": "Curăță",
+    "metrics": "Metrici",
+    "download": "Descarcă",
+    "downloadZip": "Descarcă (.zip)",
+    "delete": "Șterge",
+    "confirm": "Confirmă",
+    "cancel": "Anulează",
+    "downloadByLang": "Descarcă pe limbă…"
+  },
+
+  "nav": {
+    "home": "Strona główna",
+    "jobs": "Usługi",
+    "glossaries": "Słowniki",
+    "settings": "Ustawienia",
+    "login": "Zaloguj się",
+    "logout": "Wyloguj się",
+    "logged": "Zalogowano",
+    "themeToggle": "Zmień motyw",
+    "openMenu": "Otwórz menu"
+  },
+
+  "auth": {
+    "login": "Zaloguj się",
+    "logout": "Wyloguj się",
+    "logged": "Zalogowano"
+  },
+
+  "theme": { "toggle": "Zmień motyw" },
+
+  "ui": {
+    "user": "Użytkownik",
+    "settings": "Ustawienia",
+    "equalToFrom": "równe 'Z'",
+    "noGlossary": "Brak glosariusza",
+    "itemsPerPage": "Pozycje na stronę",
+    "searchPlaceholder": "Szukaj według ID lub tytułu...",
+    "loggedIn": "Zalogowany"
+  },
+
+  "app": {
+  "loading": "Ładowanie…",
+  "saving": "Zapisywanie…",
+  "success": "Operacja zakończona pomyślnie.",
+  "error": "Wystąpił błąd. Spróbuj ponownie.",
+  "networkError": "Błąd sieci. Sprawdź połączenie.",
+  "unauthorized": "Sesja wygasła lub brak autoryzacji.",
+  "forbidden": "Brak uprawnień do tej operacji.",
+  "notFound": "Nie znaleziono zasobu.",
+  "serverBusy": "Serwer zajęty. Spróbuj ponownie za chwilę.",
+  "rateLimited": "Zbyt wiele żądań. Proszę chwilę poczekać.",
+  "offline": "Jesteś offline.",
+  "required": "Pole wymagane.",
+  "invalid": "Nieprawidłowa wartość.",
+  "tooLarge": "Plik jest zbyt duży.",
+  "unsupported": "Nieobsługiwany format.",
+  "saved": "Zapisano.",
+  "updated": "Zaktualizowano.",
+  "deleted": "Usunięto.",
+  "copied": "Skopiowano do schowka.",
+  "confirm": "Potwierdź",
+  "cancel": "Anuluj",
+  "retry": "Spróbuj ponownie",
+  "yes": "Tak",
+  "no": "Nie",
+  "backHome": "Wróć do strony głównej",
+  "loginAgain": "Zaloguj się ponownie"
+  },
+
+  "login": {
+    "title": "Zaloguj się do konta",
+    "email": "Email",
+    "password": "Hasło",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Zaloguj się",
+    "loading": "Logowanie…",
+    "forgot": "Zapomniałeś hasła?",
+    "recoverAccess": "Odzyskaj dostęp"
+  },
+
+  "recover": {
+    "title": "Odzyskaj hasło",
+    "emailPlaceholder": "email@przyklad.com",
+    "submit": "Wyślij link",
+    "loading": "Wysyłanie..."
+  },
+
+  "notFound": {
+    "message": "Nie znaleziono strony.",
+    "backHome": "Powrót do strony głównej"
+  },
+
+  "reset": {
+    "title": "Zresetuj hasło",
+    "newPassword": "Nowe hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "submit": "Zresetuj hasło",
+    "loading": "Wysyłanie...",
+    "noToken": "Brak tokena. Skorzystaj z linku w wiadomości e-mail.",
+    "success": "Hasło zresetowane!",
+    "error": {
+      "title": "Nie można zresetować hasła",
+      "mismatch": "Hasła nie są identyczne"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Zadanie {{id}} zakończone — {{done}} zakończone pomyślnie, {{failed}} z błędem.",
+    "jobStillProcessing": "Zadanie {{id}} jest nadal przetwarzane. Odśwież później.",
+    "login": {
+      "welcomeTitle": "Witamy!",
+      "welcomeDesc": "Logowanie zakończone pomyślnie.",
+      "errorTitle": "Błąd logowania",
+      "genericError": "Logowanie nie powiodło się. Sprawdź swoje dane logowania."
+    },
+    "recover": {
+      "successTitle": "Jeśli istnieje, wysłaliśmy link.",
+      "successDesc": "Jeśli ten adres e-mail jest zarejestrowany, otrzymasz link do resetu hasła.",
+      "errorTitle": "Błąd żądania",
+      "genericError": "Nie udało się zainicjować odzyskiwania hasła. Spróbuj ponownie."
+    }
+  }
+
+
+}

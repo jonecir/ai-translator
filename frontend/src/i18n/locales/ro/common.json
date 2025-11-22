@@ -1,0 +1,231 @@
+{
+  "common": {
+    "close": "Închide"
+  },
+
+  "lang": {
+    "select": "Limbă",
+    "de": "Germană",
+    "en": "Engleză",
+    "es": "Spaniolă",
+    "fr": "Franceză",
+    "it": "Italiană",
+    "ja": "Japoneză",
+    "nl": "Olandeză",
+    "pl": "Poloneză",
+    "pt": "Portugheză",
+    "ro": "Română",
+    "zhCN": "Chineză (simplificată)"
+  },
+
+  "localeNames": {
+  "de-DE": "Germană (Germania)",
+  "en-US": "Engleză (SUA)",
+  "es-ES": "Spaniolă (Spania)",
+  "fr-FR": "Franceză (Franța)",
+  "it-IT": "Italiană (Italia)",
+  "ja-JP": "Japoneză",
+  "nl-NL": "Olandeză (Țările de Jos)",
+  "pl-PL": "Poloneză (Polonia)",
+  "pt-BR": "Portugheză (Brazilia)",
+  "ro-RO": "Română (România)",
+  "zh-CN": "Chineză (simplificată)"
+},
+
+  "jobs": {
+    "title": "Sarcini",
+    "file": "Fișier (DOCX)",
+    "glossary": "Glosar",
+    "from": "Din",
+    "to_multiple": "Către (multiple)",
+    "hold_ctrl": "Ține apăsat Ctrl/⌘ pentru a selecta mai multe. Limba identică cu „Din” este blocată.",
+    "noGlossary": "Fără glosar",
+    "selected": "Selectat:",
+    "sending": "Se încarcă...",
+    "itemsPerPage": "Elemente pe pagină",
+    "searchPlaceholder": "Caută după ID sau titlu...",
+    "sameAsFrom": "la fel ca „Din”",
+    "okShort": "ok",
+
+    "status": {
+      "done": "finalizat",
+      "processing": "în procesare",
+      "failed": "eșuat",
+      "mixed": "mixt"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Titlu",
+      "status": "Stare",
+      "targets": "Ținte",
+      "updated": "Actualizat"
+    },
+
+    "loading": "Se încarcă...",
+    "empty": "Nicio sarcină găsită",
+    "waiting": "(în așteptare)",
+    "total": "Total",
+    "prev": "Înapoi",
+    "next": "Înainte",
+    "page": "Pagină",
+    "fail": "eroare",
+
+    "needDifferentTarget": "Selectează cel puțin o limbă țintă diferită de cea sursă.",
+    "couldNotCreate": "Nu s-a putut crea sarcina. Verifică fișierul și încearcă din nou.",
+    "downloadNotReady": "Rezultatul nu este încă pregătit sau a apărut o eroare la descărcare.",
+    "downloadLangFail": "Eroare la descărcarea {{lang}}",
+    "deleted": "Sarcina {{id}} a fost ștearsă.",
+    "deleteFail": "Nu s-a putut șterge sarcina.",
+    "metricsFail": "Nu s-au putut încărca metricile.",
+    "noMetrics": "Nu există metrici înregistrate.",
+    "confirm_delete_title": "Ștergere sarcină",
+    "confirm_delete_msg": "Ești sigur că vrei să ștergi sarcina",
+    "toastStillProcessing": "Sarcina {{id}} este încă în procesare. Încearcă mai târziu."
+  },
+
+  "metrics": {
+    "title": "Metrici — Sarcină",
+    "tokens_in": "Token-uri (intrare)",
+    "tokens_out": "Token-uri (ieșire)",
+    "cost_total": "Cost total",
+    "latency_avg": "Latență medie",
+    "time_total": "Timp total",
+    "destinations": "Ținte",
+    "lang": "Limbă",
+    "status": "Stare",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Cost",
+    "total": "total",
+    "latency_col": "Latență",
+    "duration_col": "Durată"
+  },
+
+  "actions": {
+    "create": "Creează",
+    "clear": "Curăță",
+    "metrics": "Metrici",
+    "download": "Descarcă",
+    "downloadZip": "Descarcă (.zip)",
+    "delete": "Șterge",
+    "confirm": "Confirmă",
+    "cancel": "Anulează",
+    "downloadByLang": "Descarcă pe limbă…"
+  },
+
+  "nav": {
+    "home": "Acasă",
+    "jobs": "Servicii",
+    "glossaries": "Glosare",
+    "settings": "Setări",
+    "login": "Autentificare",
+    "logout": "Deconectare",
+    "logged": "Autentificat",
+    "themeToggle": "Schimbă tema",
+    "openMenu": "Deschide meniul"
+  },
+
+  "auth": {
+    "login": "Autentificare",
+    "logout": "Deconectare",
+    "logged": "Autentificat"
+  },
+
+  "theme": { "toggle": "Schimbă tema" },
+
+  "ui": {
+    "user": "Utilizator",
+    "settings": "Setări",
+    "equalToFrom": "egal cu 'Din'",
+    "noGlossary": "Fără glosar",
+    "itemsPerPage": "Elemente pe pagină",
+    "searchPlaceholder": "Caută după ID sau titlu...",
+    "loggedIn": "Autentificat"
+  },
+
+  "app": {
+  "loading": "Se încarcă…",
+  "saving": "Se salvează…",
+  "success": "Operațiune finalizată cu succes.",
+  "error": "A apărut o eroare. Încercați din nou.",
+  "networkError": "Eroare de rețea. Verificați conexiunea.",
+  "unauthorized": "Sesiune expirată sau neautorizat.",
+  "forbidden": "Nu aveți permisiunea pentru această acțiune.",
+  "notFound": "Resursa nu a fost găsită.",
+  "serverBusy": "Server ocupat. Încercați din nou în curând.",
+  "rateLimited": "Prea multe cereri. Așteptați puțin.",
+  "offline": "Sunteți offline.",
+  "required": "Câmp obligatoriu.",
+  "invalid": "Valoare nevalidă.",
+  "tooLarge": "Fișier prea mare.",
+  "unsupported": "Format nesuportat.",
+  "saved": "Salvat.",
+  "updated": "Actualizat.",
+  "deleted": "Șters.",
+  "copied": "Copiat în clipboard.",
+  "confirm": "Confirmă",
+  "cancel": "Anulează",
+  "retry": "Reîncearcă",
+  "yes": "Da",
+  "no": "Nu",
+  "backHome": "Înapoi la început",
+  "loginAgain": "Autentificați-vă din nou"
+  },
+
+  "login": {
+    "title": "Accesează contul",
+    "email": "Email",
+    "password": "Parolă",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Autentificare",
+    "loading": "Se autentifică…",
+    "forgot": "Ai uitat parola?",
+    "recoverAccess": "Recuperează accesul"
+  },
+
+  "recover": {
+    "title": "Recuperare parolă",
+    "emailPlaceholder": "email@exemplu.com",
+    "submit": "Trimite link",
+    "loading": "Se trimite..."
+  },
+
+  "notFound": {
+    "message": "Pagină negăsită.",
+    "backHome": "Înapoi la Acasă"
+  },
+
+  "reset": {
+    "title": "Resetează parola",
+    "newPassword": "Parolă nouă",
+    "confirmPassword": "Confirmă parola",
+    "submit": "Resetează parola",
+    "loading": "Se trimite...",
+    "noToken": "Token lipsă. Folosiți linkul din e-mail.",
+    "success": "Parola a fost resetată!",
+    "error": {
+      "title": "Nu s-a putut reseta parola",
+      "mismatch": "Parolele nu se potrivesc"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Jobul {{id}} a fost finalizat — {{done}} reușit(e), {{failed}} cu eroare.",
+    "jobStillProcessing": "Jobul {{id}} este încă în curs de procesare. Actualizează mai târziu.",
+    "login": {
+      "welcomeTitle": "Bun venit!",
+      "welcomeDesc": "Autentificare reușită.",
+      "errorTitle": "Eroare la autentificare",
+      "genericError": "Autentificarea a eșuat. Verifică datele de conectare."
+    },
+    "recover": {
+      "successTitle": "Dacă există, am trimis linkul.",
+      "successDesc": "Dacă acest email este înregistrat, vei primi un link de recuperare.",
+      "errorTitle": "Eroare la solicitare",
+      "genericError": "Nu s-a putut iniția recuperarea parolei. Încearcă din nou."
+    }
+  }
+
+
+}

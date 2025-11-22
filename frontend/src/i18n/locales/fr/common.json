@@ -1,0 +1,232 @@
+{
+  "common": {
+    "close": "Fermer"
+  },
+
+  "lang": {
+    "select": "Langue",
+    "de": "Allemand",
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "it": "Italien",
+    "ja": "Japonais",
+    "nl": "Néerlandais",
+    "pl": "Polonais",
+    "pt": "Portugais",
+    "ro": "Roumain",
+    "zhCN": "Chinois (simplifié)"
+  },
+
+  "localeNames": {
+    "de-DE": "Allemand (Allemagne)",
+    "en-US": "Anglais (États-Unis)",
+    "es-ES": "Espagnol (Espagne)",
+    "fr-FR": "Français (France)",
+    "it-IT": "Italien (Italie)",
+    "ja-JP": "Japonais",
+    "nl-NL": "Néerlandais (Pays-Bas)",
+    "pl-PL": "Polonais (Pologne)",
+    "pt-BR": "Portugais (Brésil)",
+    "ro-RO": "Roumain (Roumanie)",
+    "zh-CN": "Chinois (simplifié)"
+  },
+
+  "jobs": {
+    "title": "Tâches",
+    "file": "Fichier (DOCX)",
+    "glossary": "Glossaire",
+    "from": "De",
+    "to_multiple": "Vers (multiples)",
+    "hold_ctrl": "Maintenez Ctrl/⌘ pour sélectionner plusieurs. La langue identique à « De » est bloquée.",
+    "noGlossary": "Aucun glossaire",
+    "selected": "Sélectionné :",
+    "sending": "Envoi en cours...",
+    "itemsPerPage": "Éléments par page",
+    "searchPlaceholder": "Rechercher par ID ou titre...",
+    "sameAsFrom": "identique à «De»",
+    "okShort": "ok",
+
+    "status": {
+      "done": "terminé",
+      "processing": "en cours",
+      "failed": "échoué",
+      "mixed": "mixte"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Titre",
+      "status": "Statut",
+      "targets": "Cibles",
+      "updated": "Mis à jour"
+    },
+
+    "loading": "Chargement...",
+    "empty": "Aucune tâche trouvée",
+    "waiting": "(en attente)",
+    "total": "Total",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "page": "Page",
+    "fail": "erreur",
+
+    "needDifferentTarget": "Sélectionnez au moins une cible différente de la langue source.",
+    "couldNotCreate": "Impossible de créer la tâche. Vérifiez le fichier et réessayez.",
+    "downloadNotReady": "La sortie n’est pas encore prête ou une erreur de téléchargement est survenue.",
+    "downloadLangFail": "Échec du téléchargement de {{lang}}",
+    "deleted": "Tâche {{id}} supprimée.",
+    "deleteFail": "Impossible de supprimer la tâche.",
+    "metricsFail": "Impossible de charger les métriques.",
+    "noMetrics": "Aucune métrique enregistrée.",
+    "confirm_delete_title": "Supprimer la tâche",
+    "confirm_delete_msg": "Voulez-vous vraiment supprimer la tâche",
+    "toastStillProcessing": "La tâche {{id}} est encore en cours de traitement. Réessayez plus tard."
+  },
+
+  "metrics": {
+    "title": "Métriques — Tâche",
+    "tokens_in": "Jetons (entrée)",
+    "tokens_out": "Jetons (sortie)",
+    "cost_total": "Coût total",
+    "latency_avg": "Latence moyenne",
+    "time_total": "Temps total",
+    "destinations": "Cibles",
+    "lang": "Langue",
+    "status": "Statut",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Coût",
+    "total": "total",
+    "latency_col": "Latence",
+    "duration_col": "Durée"
+  },
+
+  "actions": {
+    "create": "Créer",
+    "clear": "Effacer",
+    "metrics": "Métriques",
+    "download": "Télécharger",
+    "downloadZip": "Télécharger (.zip)",
+    "delete": "Supprimer",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "downloadByLang": "Télécharger par langue…"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "jobs": "Services",
+    "glossaries": "Glossaires",
+    "settings": "Paramètres",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "logged": "Connecté",
+    "themeToggle": "Changer le thème",
+    "openMenu": "Ouvrir le menu"
+  },
+
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "logged": "Connecté"
+  },
+
+  "theme": { "toggle": "Changer le thème" },
+
+  "ui": {
+    "user": "Utilisateur",
+    "settings": "Paramètres",
+    "equalToFrom": "égal à 'De'",
+    "noGlossary": "Aucun glossaire",
+    "itemsPerPage": "Éléments par page",
+    "searchPlaceholder": "Rechercher par ID ou titre...",
+    "loggedIn": "Connecté"
+  },
+
+  "app": {
+  "loading": "Chargement…",
+  "saving": "Enregistrement…",
+  "success": "Opération effectuée avec succès.",
+  "error": "Une erreur s’est produite. Réessayez.",
+  "networkError": "Erreur réseau. Vérifiez votre connexion.",
+  "unauthorized": "Session expirée ou non autorisée.",
+  "forbidden": "Vous n’avez pas l’autorisation pour cette action.",
+  "notFound": "Ressource introuvable.",
+  "serverBusy": "Serveur occupé. Réessayez bientôt.",
+  "rateLimited": "Trop de requêtes. Veuillez patienter.",
+  "offline": "Vous êtes hors ligne.",
+  "required": "Champ obligatoire.",
+  "invalid": "Valeur invalide.",
+  "tooLarge": "Fichier trop volumineux.",
+  "unsupported": "Format non pris en charge.",
+  "saved": "Enregistré.",
+  "updated": "Mis à jour.",
+  "deleted": "Supprimé.",
+  "copied": "Copié dans le presse-papiers.",
+  "confirm": "Confirmer",
+  "cancel": "Annuler",
+  "retry": "Réessayer",
+  "yes": "Oui",
+  "no": "Non",
+  "backHome": "Retour à l’accueil",
+  "loginAgain": "Se reconnecter"
+  },
+
+  "login": {
+    "title": "Se connecter",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Connexion",
+    "loading": "Connexion en cours…",
+    "forgot": "Mot de passe oublié ?",
+    "recoverAccess": "Récupérer l’accès"
+  },
+
+  "recover": {
+    "title": "Récupérer le mot de passe",
+    "emailPlaceholder": "email@exemple.com",
+    "submit": "Envoyer le lien",
+    "loading": "Envoi en cours..."
+  },
+
+  "notFound": {
+    "message": "Page non trouvée.",
+    "backHome": "Retour à l’accueil"
+  },
+
+  "reset": {
+    "title": "Réinitialiser le mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "submit": "Réinitialiser",
+    "loading": "Envoi...",
+    "noToken": "Jeton manquant. Utilisez le lien envoyé par email.",
+    "success": "Mot de passe réinitialisé !",
+    "error": {
+      "title": "Impossible de réinitialiser",
+      "mismatch": "Les mots de passe ne correspondent pas"
+    }
+  },
+
+  "toast": {
+    "jobFinished": "Job {{id}} terminé — {{done}} réussi(s), {{failed}} en erreur.",
+    "jobStillProcessing": "Le job {{id}} est encore en cours de traitement. Actualisez plus tard.",
+    "login": {
+      "welcomeTitle": "Bienvenue !",
+      "welcomeDesc": "Connexion effectuée avec succès.",
+      "errorTitle": "Erreur de connexion",
+      "genericError": "Échec de la connexion. Vérifiez vos identifiants."
+    },
+    "recover": {
+      "successTitle": "S’il existe, nous avons envoyé le lien.",
+      "successDesc": "Si cet e-mail est enregistré, vous recevrez un lien de réinitialisation.",
+      "errorTitle": "Erreur lors de la demande",
+      "genericError": "Impossible de demander la réinitialisation du mot de passe. Réessayez."
+    }
+  }
+
+
+
+}

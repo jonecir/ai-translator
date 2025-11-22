@@ -1,66 +1,90 @@
+# backend/app/models.py
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Text, Enum, UniqueConstraint
-from sqlalchemy.orm import relationship
-from .database import Base
+from sqlalchemy import UniqueConstraint
+from app.extensions import db
 
-
-class User(Base):
+# ---------- Users ----------
+class User(db.Model):
     __tablename__ = "users"
-    id = Column(Integer, primary_key=True)
-    email = Column(String(255), unique=True, nullable=False)
-    password_hash = Column(String(255), nullable=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    id            = db.Column(db.Integer, primary_key=True)
+    name          = db.Column(db.String(200))
+    email         = db.Column(db.String(255), unique=True, nullable=False)
+    password_hash = db.Column(db.String(255), nullable=False)
+    is_active     = db.Column(db.Boolean, default=True)
+    created_at    = db.Column(db.DateTime, default=datetime.utcnow)
 
-
-class Glossary(Base):
+# ---------- Glossaries ----------
+class Glossary(db.Model):
     __tablename__ = "glossaries"
-    id = Column(Integer, primary_key=True)
-    name = Column(String(200), nullable=False)
-    locale_src = Column(String(10), nullable=False) # ex: pt-BR
-    locale_dst = Column(String(10), nullable=False) # ex: en-US
-    created_by = Column(Integer, ForeignKey("users.id"))
-    created_at = Column(DateTime, default=datetime.utcnow)
-    terms = relationship("GlossaryTerm", cascade="all, delete-orphan", backref="glossary")
+    id         = db.Column(db.Integer, primary_key=True)
+    name       = db.Column(db.String(200), nullable=False)
+    locale_src = db.Column(db.String(10), nullable=False)  # ex: pt-BR
+    locale_dst = db.Column(db.String(10), nullable=False)  # ex: en-US
+    created_by = db.Column(db.Integer, db.ForeignKey("users.id"))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
+    terms = db.relationship("GlossaryTerm", cascade="all, delete-orphan", backref="glossary")
 
-class GlossaryTerm(Base):
+class GlossaryTerm(db.Model):
     __tablename__ = "glossary_terms"
-    id = Column(Integer, primary_key=True)
-    glossary_id = Column(Integer, ForeignKey("glossaries.id"), index=True, nullable=False)
-    src = Column(String(400), nullable=False)
-    dst = Column(String(400), nullable=False)
-    notes = Column(Text)
+    id          = db.Column(db.Integer, primary_key=True)
+    glossary_id = db.Column(db.Integer, db.ForeignKey("glossaries.id"), index=True, nullable=False)
+    src         = db.Column(db.String(400), nullable=False)
+    dst         = db.Column(db.String(400), nullable=False)
+    notes       = db.Column(db.Text)
+
     __table_args__ = (UniqueConstraint("glossary_id", "src", name="uq_glossary_src"),)
 
-
-class Job(Base):
+# ---------- Jobs ----------
+class Job(db.Model):
     __tablename__ = "jobs"
-    id = Column(Integer, primary_key=True)
-    status = Column(Enum("queued", "processing", "done", "failed", name="job_status"), default="queued", index=True)
-    source_lang = Column(String(10), nullable=False)
-    target_lang = Column(String(10), nullable=False)
-    glossary_id = Column(Integer, ForeignKey("glossaries.id"))
-    created_by = Column(Integer, ForeignKey("users.id"))
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    files = relationship("JobFile", cascade="all, delete-orphan", backref="job")
+    id          = db.Column(db.Integer, primary_key=True)
+    title       = db.Column(db.String(255))  # usado para exibir nome base (filename)
+    status      = db.Column(
+        db.Enum("queued", "processing", "done", "failed", "mixed", name="job_status"),
+        default="queued", index=True
+    )
+    source_lang = db.Column(db.String(10), nullable=False)
+    # CSV dos destinos selecionados (compatibilidade com UI/listagem)
+    target_lang = db.Column(db.Text, nullable=True)
+    glossary_id = db.Column(db.Integer, db.ForeignKey("glossaries.id"))
+    created_by  = db.Column(db.Integer, db.ForeignKey("users.id"))
+    created_at  = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at  = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+    files   = db.relationship("JobFile",   cascade="all, delete-orphan", backref="job")
+    targets = db.relationship("JobTarget", cascade="all, delete-orphan", backref="job")
 
-class JobFile(Base):
+class JobFile(db.Model):
     __tablename__ = "job_files"
-    id = Column(Integer, primary_key=True)
-    job_id = Column(Integer, ForeignKey("jobs.id"), index=True, nullable=False)
-    filename = Column(String(255), nullable=False)
-    input_path = Column(String(500), nullable=False)
-    output_path = Column(String(500))
-    error = Column(Text)
+    id         = db.Column(db.Integer, primary_key=True)
+    job_id     = db.Column(db.Integer, db.ForeignKey("jobs.id"), index=True, nullable=False)
+    filename   = db.Column(db.String(255), nullable=False)
+    input_path = db.Column(db.String(500), nullable=False)
+    output_path= db.Column(db.String(500))
+    error      = db.Column(db.Text)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
+class JobTarget(db.Model):
+    __tablename__ = "job_targets"
+    id          = db.Column(db.Integer, primary_key=True)
+    job_id      = db.Column(db.Integer, db.ForeignKey("jobs.id"), index=True, nullable=False)
+    target_lang = db.Column(db.Text, nullable=True)
+    status      = db.Column(
+        db.Enum("queued", "processing", "done", "failed", name="job_target_status"),
+        default="queued", index=True
+    )
+    output_path = db.Column(db.String(500))
+    error       = db.Column(db.Text)
+    created_at  = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at  = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
-class Metric(Base):
+# ---------- Metrics ----------
+class Metric(db.Model):
     __tablename__ = "metrics"
-    id = Column(Integer, primary_key=True)
-    job_id = Column(Integer, ForeignKey("jobs.id"), index=True, nullable=False)
-    key = Column(String(100), nullable=False)
-    value = Column(String(200), nullable=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
-
+    id        = db.Column(db.Integer, primary_key=True)
+    job_id    = db.Column(db.Integer, db.ForeignKey("jobs.id"), index=True, nullable=False)
+    key       = db.Column(db.String(100), nullable=False)
+    value     = db.Column(db.String(200), nullable=False)
+    created_at= db.Column(db.DateTime, default=datetime.utcnow)

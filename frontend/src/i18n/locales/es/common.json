@@ -1,0 +1,228 @@
+{
+  "common": {
+    "close": "Cerrar"
+  },
+
+  "lang": {
+    "select": "Idioma",
+    "de": "Alemán",
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "it": "Italiano",
+    "ja": "Japonés",
+    "nl": "Neerlandés",
+    "pl": "Polaco",
+    "pt": "Portugués",
+    "ro": "Rumano",
+    "zhCN": "Chino (simplificado)"
+  },
+
+  "localeNames": {
+    "de-DE": "Alemán (Alemania)",
+    "en-US": "Inglés (EE. UU.)",
+    "es-ES": "Español (España)",
+    "fr-FR": "Francés (Francia)",
+    "it-IT": "Italiano (Italia)",
+    "ja-JP": "Japonés",
+    "nl-NL": "Neerlandés (Países Bajos)",
+    "pl-PL": "Polaco (Polonia)",
+    "pt-BR": "Portugués (Brasil)",
+    "ro-RO": "Rumano (Rumanía)",
+    "zh-CN": "Chino (simplificado)"
+  },
+  "jobs": {
+    "title": "Trabajos",
+    "file": "Archivo (DOCX)",
+    "glossary": "Glosario",
+    "from": "De",
+    "to_multiple": "A (múltiples)",
+    "hold_ctrl": "Mantén Ctrl/⌘ para seleccionar varios. El idioma igual a “De” está bloqueado.",
+    "noGlossary": "Sin glosario",
+    "selected": "Seleccionado:",
+    "sending": "Enviando...",
+    "itemsPerPage": "Elementos por página",
+    "searchPlaceholder": "Buscar por ID o título...",
+    "sameAsFrom": "igual que «Desde»",
+    "okShort": "ok",
+
+    "status": {
+      "done": "hecho",
+      "processing": "procesando",
+      "failed": "falló",
+      "mixed": "mixto"
+    },
+
+    "table": {
+      "id": "ID",
+      "title": "Título",
+      "status": "Estado",
+      "targets": "Destinos",
+      "updated": "Actualizado"
+    },
+
+    "loading": "Cargando...",
+    "empty": "No se encontraron trabajos",
+    "waiting": "(en espera)",
+    "total": "Total",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "page": "Página",
+    "fail": "falla",
+
+    "needDifferentTarget": "Selecciona al menos un destino distinto del idioma de origen.",
+    "couldNotCreate": "No se pudo crear el trabajo. Verifica el archivo e inténtalo de nuevo.",
+    "downloadNotReady": "La salida aún no está lista o ocurrió un error de descarga.",
+    "downloadLangFail": "No se pudo descargar {{lang}}",
+    "deleted": "Trabajo {{id}} eliminado.",
+    "deleteFail": "No se pudo eliminar el trabajo.",
+    "metricsFail": "No se pudieron cargar las métricas.",
+    "noMetrics": "No hay métricas registradas.",
+    "confirm_delete_title": "Eliminar trabajo",
+    "confirm_delete_msg": "¿Seguro que deseas eliminar el trabajo",
+    "toastStillProcessing": "El trabajo {{id}} aún se está procesando. Intenta más tarde."
+  },
+
+  "metrics": {
+    "title": "Métricas — Trabajo",
+    "tokens_in": "Tokens (entrada)",
+    "tokens_out": "Tokens (salida)",
+    "cost_total": "Costo total",
+    "latency_avg": "Latencia promedio",
+    "time_total": "Tiempo total",
+    "destinations": "Destinos",
+    "lang": "Idioma",
+    "status": "Estado",
+    "tokens_in_col": "Tokens in",
+    "tokens_out_col": "Tokens out",
+    "cost_col": "Costo",
+    "total": "total",
+    "latency_col": "Latencia",
+    "duration_col": "Duración"
+  },
+
+  "actions": {
+    "create": "Crear",
+    "clear": "Limpiar",
+    "metrics": "Métricas",
+    "download": "Descargar",
+    "downloadZip": "Descargar (.zip)",
+    "delete": "Eliminar",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "downloadByLang": "Descargar por idioma…"
+  },
+
+  "nav": {
+    "home": "Inicio",
+    "jobs": "Servicios",
+    "glossaries": "Glosarios",
+    "settings": "Configuraciones",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "logged": "Conectado",
+    "themeToggle": "Cambiar tema",
+    "openMenu": "Abrir menú"
+  },
+
+  "auth": {
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "logged": "Conectado"
+  },
+
+  "theme": { "toggle": "Cambiar tema" },
+
+  "ui": {
+    "user": "Usuario",
+    "settings": "Configuraciones",
+    "equalToFrom": "igual a 'De'",
+    "noGlossary": "Sin glosario",
+    "itemsPerPage": "Elementos por página",
+    "searchPlaceholder": "Buscar por ID o título...",
+    "loggedIn": "Conectado"
+  },
+
+  "app": {
+  "loading": "Cargando…",
+  "saving": "Guardando…",
+  "success": "Operación completada con éxito.",
+  "error": "Ocurrió un error. Inténtalo de nuevo.",
+  "networkError": "Error de red. Revisa tu conexión.",
+  "unauthorized": "Sesión expirada o no autorizada.",
+  "forbidden": "No tienes permiso para esta acción.",
+  "notFound": "Recurso no encontrado.",
+  "serverBusy": "Servidor ocupado. Inténtalo en breve.",
+  "rateLimited": "Demasiadas solicitudes. Espera un momento.",
+  "offline": "Estás sin conexión.",
+  "required": "Campo obligatorio.",
+  "invalid": "Valor no válido.",
+  "tooLarge": "Archivo demasiado grande.",
+  "unsupported": "Formato no compatible.",
+  "saved": "Guardado.",
+  "updated": "Actualizado.",
+  "deleted": "Eliminado.",
+  "copied": "Copiado al portapapeles.",
+  "confirm": "Confirmar",
+  "cancel": "Cancelar",
+  "retry": "Reintentar",
+  "yes": "Sí",
+  "no": "No",
+  "backHome": "Volver al inicio",
+  "loginAgain": "Iniciar sesión de nuevo"
+  },
+
+  "login": {
+    "title": "Acceder a la cuenta",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "emailPlaceholder": "you@example.com",
+    "submit": "Iniciar sesión",
+    "loading": "Iniciando sesión…",
+    "forgot": "¿Olvidaste tu contraseña?",
+    "recoverAccess": "Recuperar acceso"
+  },
+
+  "recover": {
+    "title": "Recuperar contraseña",
+    "emailPlaceholder": "email@ejemplo.com",
+    "submit": "Enviar enlace",
+    "loading": "Enviando..."
+  },
+
+  "notFound": {
+    "message": "Página no encontrada.",
+    "backHome": "Volver al inicio"
+  },
+
+  "reset": {
+    "title": "Restablecer contraseña",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "submit": "Restablecer contraseña",
+    "loading": "Enviando...",
+    "noToken": "Token faltante. Usa el enlace enviado por correo.",
+    "success": "¡Contraseña restablecida!",
+    "error": {
+      "title": "No se pudo restablecer",
+      "mismatch": "Las contraseñas no coinciden"
+    }
+  },
+  "toast": {
+    "jobFinished": "Job {{id}} finalizado — {{done}} completado(s), {{failed}} con error.",
+    "jobStillProcessing": "El job {{id}} todavía se está procesando. Actualiza más tarde.",
+    "login": {
+      "welcomeTitle": "¡Bienvenido!",
+      "welcomeDesc": "Inicio de sesión realizado con éxito.",
+      "errorTitle": "Error de inicio de sesión",
+      "genericError": "Error al iniciar sesión. Verifica tus credenciales."
+    },
+    "recover": {
+      "successTitle": "Si existe, hemos enviado el enlace.",
+      "successDesc": "Si este correo está registrado, recibirás un enlace de recuperación.",
+      "errorTitle": "Error al solicitar",
+      "genericError": "No se pudo solicitar la recuperación de contraseña. Inténtalo de nuevo."
+    }
+  }
+
+}
