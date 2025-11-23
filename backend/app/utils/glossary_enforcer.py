@@ -8,6 +8,7 @@ def enforce_glossary(input_docx: str, output_docx: str, glossary_map: dict[str, 
     """
     doc = Document(input_docx)
     replacements = defaultdict(int)
+
     def replace_in_run(run_text: str) -> str:
         new_text = run_text
         for src, dst in glossary_map.items():
@@ -24,11 +25,9 @@ def enforce_glossary(input_docx: str, output_docx: str, glossary_map: dict[str, 
                 new_text = new_text.replace(src.upper(), dst.upper())
         return new_text
 
-
     for para in doc.paragraphs:
         for run in para.runs:
             run.text = replace_in_run(run.text)
-
 
     for table in doc.tables:
         for row in table.rows:
@@ -36,7 +35,6 @@ def enforce_glossary(input_docx: str, output_docx: str, glossary_map: dict[str, 
                 for para in cell.paragraphs:
                     for run in para.runs:
                         run.text = replace_in_run(run.text)
-
 
     doc.save(output_docx)
 

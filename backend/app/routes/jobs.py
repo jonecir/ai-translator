@@ -24,7 +24,7 @@ from app.models import (
     GlossaryTerm,  # se não existir, remova o bloco do glossário mais abaixo
 )
 
-#bp = Blueprint("jobs", __name__, url_prefix="/jobs")
+# bp = Blueprint("jobs", __name__, url_prefix="/jobs")
 bp = Blueprint("jobs", __name__)
 
 # Diretórios base (pasta backend/)
@@ -62,12 +62,7 @@ def target_to_dict(t: JobTarget) -> dict:
 
 def _job_to_item(j: Job) -> dict:
     """Serializa um Job para a lista (usa o primeiro arquivo como título)."""
-    jf = (
-        db.session.query(JobFile)
-        .filter(JobFile.job_id == j.id)
-        .order_by(JobFile.id.asc())
-        .first()
-    )
+    jf = db.session.query(JobFile).filter(JobFile.job_id == j.id).order_by(JobFile.id.asc()).first()
     targets = (
         db.session.query(JobTarget)
         .filter(JobTarget.job_id == j.id)
@@ -82,12 +77,16 @@ def _job_to_item(j: Job) -> dict:
         "status": j.status,
         "source_lang": j.source_lang,
         "target_lang": j.target_lang,  # CSV (compat)
-        "targets": targets_ser,        # nome novo
-        "destinos": [                  # compat com versões anteriores do front
+        "targets": targets_ser,  # nome novo
+        "destinos": [  # compat com versões anteriores do front
             {"id": t["id"], "lang": t["lang"], "status": t["status"]} for t in targets_ser
         ],
-        "updated_at": (j.updated_at or j.created_at).isoformat() if (j.updated_at or j.created_at) else None,
+        "updated_at": (
+            (j.updated_at or j.created_at).isoformat() if (j.updated_at or j.created_at) else None
+        ),
     }
+
+
 # -------------------------------------------
 
 
@@ -105,20 +104,19 @@ def list_jobs():
 
     if q:
         like = f"%{q}%"
-        base = (
-            base.join(JobFile, JobFile.job_id == Job.id)
-            .filter(or_(
+        base = base.join(JobFile, JobFile.job_id == Job.id).filter(
+            or_(
                 cast(Job.id, String).ilike(like),
                 JobFile.filename.ilike(like),
-            ))
+            )
         )
 
     total = base.count()
     rows = (
         base.order_by(Job.updated_at.desc().nullslast(), Job.id.desc())
-            .offset((page - 1) * page_size)
-            .limit(page_size)
-            .all()
+        .offset((page - 1) * page_size)
+        .limit(page_size)
+        .all()
     )
 
     items = [_job_to_item(j) for j in rows]
@@ -179,7 +177,10 @@ def create_job():
             uniq_targets.append(t)
 
     if not uniq_targets:
-        return jsonify({"error": "Nenhum destino válido. Selecione idiomas diferentes de 'De'."}), 400
+        return (
+            jsonify({"error": "Nenhum destino válido. Selecione idiomas diferentes de 'De'."}),
+            400,
+        )
 
     glossary_id_raw = request.form.get("glossary_id")
     glossary_id = int(glossary_id_raw) if glossary_id_raw else None
@@ -251,20 +252,27 @@ def create_job():
 
     # Status agregado do job
     statuses = {t.status for t in targets}
-    job.status = "done" if statuses == {"done"} else ("failed" if statuses == {"failed"} else "mixed")
+    job.status = (
+        "done" if statuses == {"done"} else ("failed" if statuses == {"failed"} else "mixed")
+    )
     job.updated_at = datetime.utcnow()
 
     db.session.commit()
 
-    return jsonify({
-        "id": job.id,
-        "title": filename,
-        "status": job.status,
-        "source_lang": source_lang,
-        "target_langs": uniq_targets,
-        "targets": [target_to_dict(t) for t in targets],
-        "errors": errors,
-    }), 201
+    return (
+        jsonify(
+            {
+                "id": job.id,
+                "title": filename,
+                "status": job.status,
+                "source_lang": source_lang,
+                "target_langs": uniq_targets,
+                "targets": [target_to_dict(t) for t in targets],
+                "errors": errors,
+            }
+        ),
+        201,
+    )
 
 
 # LISTAR TARGETS: GET /api/jobs/<id>/targets
@@ -320,12 +328,13 @@ def download(job_id: int):
     lang = (request.args.get("lang") or "").strip()
 
     if lang:
-        jt = (
-            db.session.query(JobTarget)
-            .filter_by(job_id=job_id, target_lang=lang)
-            .first()
-        )
-        if not jt or jt.status != "done" or not jt.output_path or not os.path.exists(jt.output_path):
+        jt = db.session.query(JobTarget).filter_by(job_id=job_id, target_lang=lang).first()
+        if (
+            not jt
+            or jt.status != "done"
+            or not jt.output_path
+            or not os.path.exists(jt.output_path)
+        ):
             return jsonify({"error": "not ready"}), 400
 
         return send_file(
@@ -343,7 +352,9 @@ def download(job_id: int):
         .order_by(JobTarget.id.asc())
         .all()
     )
-    done_targets = [t for t in targets if t.status == "done" and t.output_path and os.path.exists(t.output_path)]
+    done_targets = [
+        t for t in targets if t.status == "done" and t.output_path and os.path.exists(t.output_path)
+    ]
 
     if not done_targets:
         return jsonify({"error": "not ready"}), 400

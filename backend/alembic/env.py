@@ -16,6 +16,7 @@ if BASE_DIR not in sys.path:
 # Carregar .env do backend (opcional, ajuda com DATABASE_URL, etc.)
 try:
     from dotenv import load_dotenv
+
     load_dotenv(os.path.join(BASE_DIR, ".env"))
 except Exception:
     pass

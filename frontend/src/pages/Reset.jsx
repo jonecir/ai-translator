@@ -46,9 +46,7 @@ export default function Reset() {
 
   return (
     <div className="max-w-md mx-auto grid gap-4 p-4">
-      <h2 className="text-xl font-semibold">
-        {t("reset.title")}
-      </h2>
+      <h2 className="text-xl font-semibold">{t("reset.title")}</h2>
 
       <form onSubmit={onSubmit} className="grid gap-3">
         <input
@@ -74,11 +72,7 @@ export default function Reset() {
           {loading ? t("reset.loading") : t("reset.submit")}
         </button>
 
-        {!token && (
-          <div className="text-sm text-neutral-500">
-            {t("reset.noToken")}
-          </div>
-        )}
+        {!token && <div className="text-sm text-neutral-500">{t("reset.noToken")}</div>}
       </form>
     </div>
   );

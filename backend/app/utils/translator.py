@@ -12,12 +12,16 @@ DEEPL_API_URL = os.getenv("DEEPL_API_URL", "https://api.deepl.com/v2/translate")
 
 AZURE_KEY = os.getenv("AZURE_TRANSLATOR_KEY")
 AZURE_REGION = os.getenv("AZURE_TRANSLATOR_REGION", "eastus")
-AZURE_ENDPOINT = os.getenv("AZURE_TRANSLATOR_ENDPOINT", "https://api.cognitive.microsofttranslator.com")
+AZURE_ENDPOINT = os.getenv(
+    "AZURE_TRANSLATOR_ENDPOINT", "https://api.cognitive.microsofttranslator.com"
+)
 
 __all__ = ["translate_text", "TranslatorError"]
 
+
 class TranslatorError(Exception):
     pass
+
 
 def translate_text(texts: Sequence[str], source_lang: str, target_lang: str) -> list[str]:
     """
@@ -35,10 +39,13 @@ def translate_text(texts: Sequence[str], source_lang: str, target_lang: str) -> 
     # fallback: sem tradução
     return list(texts)
 
+
 # --------- Translation Providers ---------
+
 
 def _translate_openai(texts: Sequence[str], source: str, target: str) -> list[str]:
     import requests
+
     system = (
         "You are a professional translator. Translate the user text from "
         f"{source} to {target}. Keep meaning, tone and placeholders. "
@@ -84,7 +91,6 @@ def _translate_openai(texts: Sequence[str], source: str, target: str) -> list[st
     raise TranslatorError(f"openai error: {r.status_code} {r.text}")
 
 
-
 def _deepl_normalize_langs(source: str | None, target: str | None) -> tuple[str | None, str]:
     # upper e unifica separador
     s = (source or "").replace("_", "-").upper()
@@ -92,12 +98,38 @@ def _deepl_normalize_langs(source: str | None, target: str | None) -> tuple[str 
 
     # Lista de idiomas DeepL (bases) suportados para SOURCE
     bases = {
-        "BG","CS","DA","DE","EL","EN","ES","ET","FI","FR","HU","ID","IT",
-        "JA","KO","LT","LV","NB","NL","PL","PT","RO","RU","SK","SL","SV",
-        "TR","UK","ZH"
+        "BG",
+        "CS",
+        "DA",
+        "DE",
+        "EL",
+        "EN",
+        "ES",
+        "ET",
+        "FI",
+        "FR",
+        "HU",
+        "ID",
+        "IT",
+        "JA",
+        "KO",
+        "LT",
+        "LV",
+        "NB",
+        "NL",
+        "PL",
+        "PT",
+        "RO",
+        "RU",
+        "SK",
+        "SL",
+        "SV",
+        "TR",
+        "UK",
+        "ZH",
     }
     # Lista de TARGET válidos (bases + regionais permitidos)
-    target_ok = bases | {"EN-US","EN-GB","PT-PT","PT-BR"}
+    target_ok = bases | {"EN-US", "EN-GB", "PT-PT", "PT-BR"}
 
     # SOURCE: colapsa regionais -> base (PT-BR -> PT, EN-US -> EN, etc.)
     if s:
@@ -118,6 +150,7 @@ def _deepl_normalize_langs(source: str | None, target: str | None) -> tuple[str 
             t = "EN"  # fallback seguro
 
     return s, t
+
 
 def _translate_deepl(texts: Sequence[str], source: str, target: str) -> list[str]:
     import requests
@@ -141,8 +174,10 @@ def _translate_deepl(texts: Sequence[str], source: str, target: str) -> list[str
     j = r.json()
     return [tr["text"] for tr in j["translations"]]
 
+
 def _translate_azure(texts: Sequence[str], source: str, target: str) -> list[str]:
     import requests, uuid
+
     route = f"/translate?api-version=3.0&to={target}"
     if source:
         route += f"&from={source}"

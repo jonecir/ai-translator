@@ -8,13 +8,8 @@ export default function NotFound() {
   return (
     <div className="max-w-xl mx-auto text-center py-16">
       <h2 className="text-3xl font-semibold mb-2">404</h2>
-      <p className="text-neutral-600 dark:text-neutral-400 mb-6">
-        {t("notFound.message")}
-      </p>
-      <Link
-        to="/"
-        className="underline"
-      >
+      <p className="text-neutral-600 dark:text-neutral-400 mb-6">{t("notFound.message")}</p>
+      <Link to="/" className="underline">
         {t("notFound.backHome")}
       </Link>
     </div>

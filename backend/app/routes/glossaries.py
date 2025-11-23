@@ -21,7 +21,7 @@ GLOSSARIES = {
 @bp.route("/glossaries", methods=["GET"])
 @token_required
 def list_glossaries():
-    return jsonify([{"id": k, **v, "terms": len(v["terms"]) } for k, v in GLOSSARIES.items()])
+    return jsonify([{"id": k, **v, "terms": len(v["terms"])} for k, v in GLOSSARIES.items()])
 
 
 @bp.route("/glossaries/<int:g_id>", methods=["GET"])

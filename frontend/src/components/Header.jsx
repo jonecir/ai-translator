@@ -6,39 +6,59 @@ import logoUrl from "@/assets/logo.svg";
 import { Sun, Moon } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-function cx(...xs) { return xs.filter(Boolean).join(" "); }
+function cx(...xs) {
+  return xs.filter(Boolean).join(" ");
+}
 
 export default function Header() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [menuUser, setMenuUser] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-  const { user, isLogged, logout } = useAuth();
 
-  // Dark mode inicial + sincroniza com preferência do SO
-  useEffect(() => {
+  // Dark mode: inicializa estado considerando localStorage + SO
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === "undefined") return false;
+
     const stored = localStorage.getItem("theme");
     const mql = window.matchMedia?.("(prefers-color-scheme: dark)");
     const prefersDark = !!mql?.matches;
+
     const initial = stored ?? (prefersDark ? "dark" : "light");
     const enabled = initial === "dark";
+
     document.documentElement.classList.toggle("dark", enabled);
-    setIsDark(enabled);
+    return enabled;
+  });
+
+  const { user, isLogged, logout } = useAuth();
+
+  // Sincroniza com mudanças de preferência do SO (sem setState direto no corpo do effect)
+  useEffect(() => {
+    if (typeof window === "undefined") return undefined;
+
+    const mql = window.matchMedia?.("(prefers-color-scheme: dark)");
+    if (!mql) return undefined;
 
     const onChange = (e) => {
+      // Se o usuário já escolheu manualmente o tema, não sobrescreve
       if (localStorage.getItem("theme")) return;
-      document.documentElement.classList.toggle("dark", e.matches);
-      setIsDark(e.matches);
+
+      const enabled = e.matches;
+      document.documentElement.classList.toggle("dark", enabled);
+      setIsDark(enabled);
     };
-    mql?.addEventListener?.("change", onChange);
-    return () => mql?.removeEventListener?.("change", onChange);
+
+    mql.addEventListener?.("change", onChange);
+    return () => mql.removeEventListener?.("change", onChange);
   }, []);
 
   const toggleTheme = () => {
-    const next = !isDark;
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-    setIsDark(next);
+    setIsDark((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle("dark", next);
+      localStorage.setItem("theme", next ? "dark" : "light");
+      return next;
+    });
   };
 
   const handleLogout = () => logout(true);
@@ -46,7 +66,7 @@ export default function Header() {
   const routes = [
     { to: ".", label: t("nav.home"), end: true },
     { to: "jobs", label: t("nav.jobs") },
-    { to: "glossaries", label: t("nav.glossaries") }
+    { to: "glossaries", label: t("nav.glossaries") },
   ];
 
   const linkBase =
@@ -174,7 +194,7 @@ export default function Header() {
                       "px-3 py-2 rounded-lg",
                       isActive
                         ? "bg-black/10 dark:bg-white/20"
-                        : "hover:bg-black/5 dark:hover:bg-white/10"
+                        : "hover:bg-black/5 dark:hover:bg-white/10",
                     ].join(" ")
                   }
                 >
@@ -183,7 +203,6 @@ export default function Header() {
               ))}
 
               <div className="flex items-center gap-2 pt-1">
-                {/* Se quiser mostrar o seletor no mobile: */}
                 <LanguageSwitcher />
 
                 <button

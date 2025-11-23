@@ -3,10 +3,7 @@ import { useEffect, useState } from "react";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 
-import {
-  LANG_OPTIONS_SORTED,
-  getLocalizedLangLabel,
-} from "@/i18n/languages";
+import { LANG_OPTIONS_SORTED, getLocalizedLangLabel } from "@/i18n/languages";
 
 /**
  * Normaliza qualquer código (pt-BR, pt, en-US, en, de-DE, zh, zh-CN...)
@@ -37,9 +34,7 @@ export default function LanguageSwitcher({ className = "" }) {
   const { t } = useTranslation();
 
   // estado guarda SEMPRE o código usado pelo i18next (pt, en, de, ...)
-  const [lang, setLang] = useState(() =>
-    normalizeUiLang(i18next.language ?? "pt")
-  );
+  const [lang, setLang] = useState(() => normalizeUiLang(i18next.language ?? "pt"));
 
   // atualiza o atributo <html lang="...">
   useEffect(() => {

@@ -7,66 +7,70 @@ on:
     branches: [main, dev]
 
 jobs:
-  backend:
-    name: Backend (Flask)
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    backend:
+      name: Backend (Flask)
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: backend
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: "pip"
-          # Caminho do arquivo de dependências a partir da raiz do repo
-          cache-dependency-path: "backend/requirements.txt"
+        - name: Set up Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: "3.12"
+            cache: "pip"
+            cache-dependency-path: "backend/requirements.txt"
 
-      - name: Install dependencies
-        run: |
-          if [ -f requirements.txt ]; then
-            pip install --upgrade pip
-            pip install -r requirements.txt
-          else
-            echo "No requirements.txt found, skipping."
-          fi
+        - name: Install dependencies
+          run: |
+            if [ -f requirements.txt ]; then
+              pip install --upgrade pip
+              pip install -r requirements.txt
+            else
+              echo "No requirements.txt found, skipping."
+            fi
 
-      - name: Test backend (optional)
-        run: |
-          if [ -d "tests" ]; then
-            pytest || true
-          else
-            echo "No backend tests found, skipping."
-          fi
+        - name: Lint backend (black & flake8)
+          run: |
+            black --check .
+            flake8 .
 
-  frontend:
-    name: Frontend (React/Vite)
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+        - name: Test backend
+          run: |
+            if [ -d "tests" ]; then
+              pytest
+            else
+              echo "No backend tests found, skipping."
+            fi
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-          # Caminho do package-lock a partir da raiz
-          cache-dependency-path: "frontend/package-lock.json"
+    frontend:
+      name: Frontend (React/Vite)
+      runs-on: ubuntu-latest
+      defaults:
+        run:
+          working-directory: frontend
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        - name: Set up Node
+          uses: actions/setup-node@v4
+          with:
+            node-version: "20"
 
-      - name: Build frontend
-        run: npm run build
+        - name: Install dependencies
+          run: |
+            if [ -f package-lock.json ]; then
+              npm ci
+            else
+              npm install
+            fi
+
+        - name: Run frontend tests
+          run: npm run test:run
+
+        - name: Build frontend
+          run: npm run build

@@ -5,7 +5,7 @@ import i18next from "i18next";
 // -------- Base URL --------
 const DEV = import.meta.env.DEV;
 const ENV_BASE = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/+$/, "");
-const BASE_URL = DEV ? "/api" : (ENV_BASE || "/api");
+const BASE_URL = DEV ? "/api" : ENV_BASE || "/api";
 
 // Axios instance
 const api = axios.create({
@@ -32,7 +32,7 @@ api.interceptors.request.use((config) => {
   // Adiciona ?lang= atual (sem sobrescrever) — mantém backend e frontend alinhados
   const current = i18next.language || localStorage.getItem("i18nextLng") || "pt";
   const l = (current || "").toLowerCase();
-  const normalized = l.startsWith("pt") ? "pt" : (l.startsWith("zh") ? "zh-CN" : current);
+  const normalized = l.startsWith("pt") ? "pt" : l.startsWith("zh") ? "zh-CN" : current;
 
   config.params = config.params || {};
   if (!("lang" in config.params)) {
@@ -93,7 +93,7 @@ api.interceptors.response.use(
     }
 
     throw error;
-  }
+  },
 );
 
 export default api;

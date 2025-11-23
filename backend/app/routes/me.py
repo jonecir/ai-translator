@@ -4,6 +4,7 @@ from app.utils.auth_middleware import token_required
 
 bp = Blueprint("me", __name__)
 
+
 @bp.route("/me", methods=["GET"])
 @token_required
 def me():

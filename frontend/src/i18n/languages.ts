@@ -3,13 +3,22 @@
 // Use estes códigos também ao enviar/receber do backend.
 
 export type LangCode =
-  | "pt-BR" | "en-US" | "es-ES" | "fr-FR" | "it-IT" | "de-DE"
-  | "ro-RO" | "ja-JP" | "zh-CN" | "nl-NL" | "pl-PL";
+  | "pt-BR"
+  | "en-US"
+  | "es-ES"
+  | "fr-FR"
+  | "it-IT"
+  | "de-DE"
+  | "ro-RO"
+  | "ja-JP"
+  | "zh-CN"
+  | "nl-NL"
+  | "pl-PL";
 
 export interface LangOption {
   code: LangCode;
-  label: string;        // rótulo visível no dropdown
-  native?: string;      // nome nativo (quando diferente)
+  label: string; // rótulo visível no dropdown
+  native?: string; // nome nativo (quando diferente)
 }
 
 export const LANG_OPTIONS: LangOption[] = [
@@ -23,22 +32,21 @@ export const LANG_OPTIONS: LangOption[] = [
   { code: "pl-PL", label: "Polski (Polska)" },
   { code: "pt-BR", label: "Português (Brasil)" },
   { code: "ro-RO", label: "Română (România)" },
-  { code: "zh-CN", label: "中文（简体）" }
+  { code: "zh-CN", label: "中文（简体）" },
 ];
 
 // Útil para validações/conversões rápidas
-export const LANG_SET = new Set<LangCode>(LANG_OPTIONS.map(o => o.code));
-export const LANG_MAP = Object.fromEntries(LANG_OPTIONS.map(o => [o.code, o]));
+export const LANG_SET = new Set<LangCode>(LANG_OPTIONS.map((o) => o.code));
+export const LANG_MAP = Object.fromEntries(LANG_OPTIONS.map((o) => [o.code, o]));
 
 // Normaliza string arbitrária para um LangCode conhecido (ou null)
 export function normalizeLang(code: string | null | undefined): LangCode | null {
   if (!code) return null;
   const c = code.trim().replace("_", "-");
-  if (LANG_SET.has(c as LangCode)) 
-    return c as LangCode;
+  if (LANG_SET.has(c as LangCode)) return c as LangCode;
 
   const base = c.split("-")[0].toLowerCase();
-  const found = LANG_OPTIONS.find(o => o.code.toLowerCase().startsWith(base + "-"));
+  const found = LANG_OPTIONS.find((o) => o.code.toLowerCase().startsWith(base + "-"));
   return found ? found.code : null;
 }
 
@@ -48,13 +56,15 @@ export function getLocalizedLangLabel(code: LangCode, uiLang: string): string {
     const [lang, region] = code.split("-") as [string, string | undefined];
     // Alguns ambientes não têm Intl.DisplayNames
     // @ts-ignore
-    const dnLang = typeof Intl !== "undefined" && (Intl as any).DisplayNames
-      ? new (Intl as any).DisplayNames([uiLang], { type: "language" })
-      : null;
+    const dnLang =
+      typeof Intl !== "undefined" && (Intl as any).DisplayNames
+        ? new (Intl as any).DisplayNames([uiLang], { type: "language" })
+        : null;
     // @ts-ignore
-    const dnRegion = typeof Intl !== "undefined" && (Intl as any).DisplayNames
-      ? new (Intl as any).DisplayNames([uiLang], { type: "region" })
-      : null;
+    const dnRegion =
+      typeof Intl !== "undefined" && (Intl as any).DisplayNames
+        ? new (Intl as any).DisplayNames([uiLang], { type: "region" })
+        : null;
 
     const langName = dnLang ? dnLang.of(lang) : null;
     const regionName = region && dnRegion ? dnRegion.of(region) : null;
@@ -69,5 +79,6 @@ export function getLocalizedLangLabel(code: LangCode, uiLang: string): string {
 }
 
 // Ordena por label (útil se quiser lista ordenada alfabeticamente)
-export const LANG_OPTIONS_SORTED: LangOption[] =
-  [...LANG_OPTIONS].sort((a, b) => a.label.localeCompare(b.label));
+export const LANG_OPTIONS_SORTED: LangOption[] = [...LANG_OPTIONS].sort((a, b) =>
+  a.label.localeCompare(b.label),
+);

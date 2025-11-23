@@ -35,9 +35,7 @@ export default function Recover() {
 
   return (
     <div className="max-w-md mx-auto grid gap-4 p-4">
-      <h2 className="text-xl font-semibold">
-        {t("recover.title")}
-      </h2>
+      <h2 className="text-xl font-semibold">{t("recover.title")}</h2>
       <form onSubmit={onSubmit} className="grid gap-3">
         <input
           type="email"

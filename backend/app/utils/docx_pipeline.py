@@ -3,7 +3,9 @@ from docx import Document
 from app.utils.translator import translate_text  # ✅ import absoluto
 
 
-def run_docx_to_docx(in_path: str, out_path: str, glossary: dict[str, str], source_lang="pt-BR", target_lang="en-US"):
+def run_docx_to_docx(
+    in_path: str, out_path: str, glossary: dict[str, str], source_lang="pt-BR", target_lang="en-US"
+):
     """
     Lê DOCX, traduz parágrafos e aplica substituições de glossário
     (após tradução). Salva em out_path. Retorna métricas simples.

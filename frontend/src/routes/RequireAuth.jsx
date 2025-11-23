@@ -8,5 +8,5 @@ export default function RequireAuth() {
   if (!ready) return <div className="grid place-items-center py-20">Carregando…</div>;
   if (!isLogged) return <Navigate to="/login" replace state={{ from: location }} />;
 
-  return <Outlet />;   // <- importante
+  return <Outlet />; // <- importante
 }

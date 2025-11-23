@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import api, { getToken, setToken, clearToken } from "@/lib/api";
 import { getExpMs } from "@/lib/jwt";
@@ -36,7 +37,7 @@ export default function AuthProvider({ children }) {
           doLogout(true); // 👈 sem token no refresh → sai e redireciona
         }
       } catch {
-        doLogout(true);   // 👈 falha no refresh → sai e redireciona
+        doLogout(true); // 👈 falha no refresh → sai e redireciona
       }
     }, delay);
   };
@@ -69,7 +70,7 @@ export default function AuthProvider({ children }) {
           doLogout(true); // 👈 sem token no refresh inicial
         }
       } catch {
-        doLogout(true);   // 👈 refresh inicial falhou
+        doLogout(true); // 👈 refresh inicial falhou
       } finally {
         setReady(true);
       }
@@ -96,9 +97,9 @@ export default function AuthProvider({ children }) {
     if (shouldRedirect) redirectToLogin(); // 👈 redireciona para /login
   };
 
+  // Executa apenas uma vez no mount para restaurar sessão.
   useEffect(() => {
     init();
-    return () => timerRef.current && clearTimeout(timerRef.current);
   }, []);
 
   return (

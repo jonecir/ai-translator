@@ -11,3 +11,6 @@ ruff==0.6.9
 black==24.8.0
 isort==5.13.2
 Flask-Babel==4.0.0
+flake8
+pytest
+pytest-cov

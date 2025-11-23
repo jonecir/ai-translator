@@ -1,0 +1,8 @@
+// frontend/src/test/smoke.test.jsx
+import { describe, it, expect } from "vitest";
+
+describe("smoke test", () => {
+  it("works", () => {
+    expect(1 + 1).toBe(2);
+  });
+});

@@ -20,8 +20,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState("");
 
-  const onChange = (e) =>
-    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+  const onChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -37,11 +36,9 @@ export default function Login() {
 
       navigate(from, { replace: true });
     } catch (error) {
-      const backendMsg =
-        error?.response?.data?.error || error?.response?.data?.message;
+      const backendMsg = error?.response?.data?.error || error?.response?.data?.message;
 
-      const msg =
-        backendMsg || t("toast.login.genericError");
+      const msg = backendMsg || t("toast.login.genericError");
 
       setErr(String(msg));
       push({
@@ -56,9 +53,7 @@ export default function Login() {
 
   return (
     <div className="max-w-md mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold tracking-tight mb-6">
-        {t("login.title")}
-      </h1>
+      <h1 className="text-2xl font-semibold tracking-tight mb-6">{t("login.title")}</h1>
 
       <form onSubmit={onSubmit} className="grid gap-4">
         <div className="grid gap-1.5">
@@ -95,11 +90,7 @@ export default function Login() {
           />
         </div>
 
-        {err && (
-          <div className="text-sm text-red-600 dark:text-red-400">
-            {err}
-          </div>
-        )}
+        {err && <div className="text-sm text-red-600 dark:text-red-400">{err}</div>}
 
         <button
           type="submit"
